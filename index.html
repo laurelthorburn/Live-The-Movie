@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./Assets/css/reset.css" />
     <!-- put third party links here -->
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <!-- our custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="./Assets/css/style.css" />
 </head>
@@ -16,6 +17,32 @@
         <div class="background">
             <div class ="text-options">
                 <span class ="movie-option" id="genre">Genre:</span>
+
+                <div class="dropdown is-hoverable">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                        <span>Select Movie Genre</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                      <div class="dropdown-content">
+                        <div class="dropdown-item">
+                          <div id = "action">Action</div>
+                          <div id = "comedy">Comedy</div>
+                          <div id = "drama">Drama</div>
+                          <div id = "fantasy">Fantasy</div>
+                          <div id = "horror">Horror</div>
+                          <div id = "mystery">Mystery</div>
+                          <div id = "romance">Romance</div>
+                          <div id = "thriller">Thriller</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 <span class ="movie-option" id="rating">Rating:</span>
                 <span class ="movie-option" id="release">Release Date:</span>
 
