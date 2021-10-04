@@ -12,17 +12,29 @@
     align-items: center;
 }
 
+#main-title {
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 35px;
+}
+
+#big-letter {
+    font-size: 60px;
+}
+
 .text-options {
     color: white; 
-    background-color: rgba(0, 255, 255, 0.367); 
     height: 600px;
     width: 800px;;
 }
 
+.name-and-dropdown{
+    /* display: inline-block; */
+}
+
 .movie-option{
-    font-family: 'Special Elite', cursive;
-    font-size: 65px;
-    display: block;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 35px;
 }
 
 .dropdown {
