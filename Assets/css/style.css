@@ -14,8 +14,13 @@
 
 .text-options {
     color: white; 
-    background-color: aqua;
+    background-color: rgba(0, 255, 255, 0.367); 
     height: 600px;
     width: 800px;;
 }
 
+.movie-option{
+    font-family: 'Special Elite', cursive;
+    font-size: 65px;
+    display: block;
+}
