@@ -1,3 +1,11 @@
 body {
     background-color: rgba(232, 208, 179, 0.378);
 }
+
+.row {
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+ 
+}
