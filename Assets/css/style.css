@@ -11,5 +11,19 @@ font-size: 100px;
 #introduction {
     text-align: center;
     font-size: 32px;
-    width: 800px
+margin: 50px 500px;
+}
+
+.containerMovie {
+    border: black 1px solid;
+    width: 1500px;
+    height: 400px;
+}
+
+.card:hover{
+    opacity: 50%;
+}
+
+img {
+    height: 200px;
 }
