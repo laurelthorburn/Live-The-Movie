@@ -7,3 +7,9 @@ h1 {
     font-family: 'Kristi', cursive;
 font-size: 100px;
 }
+
+#introduction {
+    text-align: center;
+    font-size: 32px;
+    width: 800px
+}
