@@ -11,8 +11,8 @@
     grid-area: sidebar;
     background-color: crimson;
   }
-  .ad {
-    grid-area: ad;
+  .music {
+    grid-area: music;
   }
   .main-footer {
     grid-area: footer;
@@ -27,7 +27,7 @@
       "nav"
       "content"
       "sidebar"
-      "ad"
+      "music"
       "footer";
   }
 
@@ -36,8 +36,8 @@
       grid-template-columns: 1fr 4fr 1fr;
       grid-template-areas:
         "header header  header"
-        "nav    content sidebar"
-        "nav    content ad"
+        "content content     sidebar"
+        "content content     music"
         "footer footer  footer"
      }
 
