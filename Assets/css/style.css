@@ -3,25 +3,27 @@ body {
 }
 
 header {
-    display: block;
-    justify-content: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 h1 {
-    text-align: center;
     font-family: 'Kristi', cursive;
     font-size: 200px;
 }
 
 #introduction {
+    text-align: center;
     font-size: 32px;
-    margin: 50px 500px;
+    margin: 50px 0;
     width: 1000px;
+
 }
 
 .card:hover{
-    opacity: 50%;
+    opacity: 80%;
 }
 
 img {
