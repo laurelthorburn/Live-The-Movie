@@ -92,6 +92,84 @@ const genres = [
   ]
 
 
+<<<<<<< Updated upstream
 function HILAUREL (){
 
+=======
+  const valentinesDay = $('#Valentines');
+  const Patrick = $('#Patrick');
+  const Independence = $('#Independence');
+  const Halloween = $('#Halloween');
+  const Thanksgiving = $('#Thanksgiving');0
+  const Christmas = $('#Christmas');
+  const NewYear = $('#NewYear');
+  const Muertos = $('#Muertos');
+
+  // valentinesDay.addEventListener("click", openPage());
+
+  // function openPage() {
+    
+  // }
+
+  $('#Valentines').on('click', function(){
+    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       // set up API fetch depending on holiday parameters
+       displayMovie()
+  });
+
+  $('#Patrick').on('click', function(){
+    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       // set up API fetch depending on holiday parameters
+  });
+
+  $('#Halloween').on('click', function(){
+    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       // set up API fetch depending on holiday parameters
+  });
+
+  $('#Thanksgiving').on('click', function(){
+    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       // set up API fetch depending on holiday parameters
+  });
+
+  $('#Christmas').on('click', function(){
+    window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       // set up API fetch depending on holiday parameters
+  });
+
+  $('#NewYear').on('click', function(){
+    window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       // set up API fetch depending on holiday parameters
+  });
+
+  $('#Independence').on('click', function(){
+    window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       // set up API fetch depending on holiday parameters
+  });
+
+  $('#Muertos').on('click', function(){
+    window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       // set up API fetch depending on holiday parameters
+  });
+
+
+  function  displayMovie() {
+    let id = genres.id;
+    // fetches genre list
+    // var finalUrl = "https://api.themoviedb.org/3/genre/movie/list?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
+    // fetches one movie
+    // var finalUrl = "https://api.themoviedb.org/3/movie/9648?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
+    var finalUrl = "https://api.themoviedb.org/3/genre/10752/movies?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&include_adult=false"
+    
+
+    fetch(finalUrl)
+    .then(function (response) {
+      // console.log(response)
+    return response.json();
+    })
+    .then(function (data) {
+      console.log(data)
+      }
+)
+>>>>>>> Stashed changes
 };
