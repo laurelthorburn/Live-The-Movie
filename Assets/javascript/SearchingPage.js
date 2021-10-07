@@ -14,14 +14,14 @@ const mainMovie = document.getElementById('mainMovie');
 
 
 
-  const valentinesDay = $('#Valentines');
-  const Patrick = $('#Patrick');
-  const Independence = $('#Independence');
-  const Halloween = $('#Halloween');
-  const Thanksgiving = $('#Thanksgiving');0
-  const Christmas = $('#Christmas');
-  const NewYear = $('#NewYear');
-  const Muertos = $('#Muertos');
+const valentinesDay = $('#valentines');
+const patrick = $('#patrick');
+const independence = $('#independence');
+const halloween = $('#halloween');
+const thanksgiving = $('#thanksgiving');0
+const christmas = $('#christmas');
+const newYear = $('#newYear');
+const birthday = $('#birthday');
 
 function onLoad (){
   // displaying API fetched before using parameters from onClick event from last page
