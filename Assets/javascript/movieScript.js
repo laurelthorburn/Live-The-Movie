@@ -13,14 +13,14 @@ const mainMovie = document.getElementById('mainMovie');
 // fetched genres from https://api.themoviedb.org/3/genre/movie/list?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8
 
 
-  const valentinesDay = $('#Valentines');
-  const Patrick = $('#Patrick');
-  const Independence = $('#Independence');
-  const Halloween = $('#Halloween');
-  const Thanksgiving = $('#Thanksgiving');0
-  const Christmas = $('#Christmas');
-  const NewYear = $('#NewYear');
-  const Muertos = $('#Muertos');
+  const valentinesDay = $('#valentines');
+  const patrick = $('#patrick');
+  const independence = $('#independence');
+  const halloween = $('#halloween');
+  const thanksgiving = $('#thanksgiving');0
+  const christmas = $('#christmas');
+  const newYear = $('#newYear');
+  const birthday = $('#birthday');
 
   // valentinesDay.addEventListener("click", openPage());
 
