@@ -1,0 +1,50 @@
+.main-head {
+    grid-area: header;
+    background-color: chartreuse;
+    height: 150px;
+
+  }
+  .content {
+    grid-area: content;
+    background-color: chocolate;
+  }
+
+  .side {
+    grid-area: sidebar;
+    background-color: crimson;
+    height: 500px;
+  }
+  .music {
+    grid-area: music;
+    background-color: aqua;
+    height: 250px;
+  }
+  .main-footer {
+    grid-area: footer;
+    background-color: darkmagenta;
+    height: 100px;
+  }
+  
+  .wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "sidebar"
+      "music"
+      "footer";
+  }
+
+  @media (min-width: 700px) {
+    .wrapper {
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas:
+        "header header  header"
+        "content content     sidebar"
+        "content content     music"
+        "footer footer  footer"
+     }
+
+  }
