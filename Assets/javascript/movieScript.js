@@ -91,11 +91,16 @@ const genres = [
     }
   ]
 
+//   valent - romance 10749
+// patrick - comedy,  romance 35 10749
+// independance - history, war, western 36 10752 37
+// halloween - horrow, thriller, animation, fantasy, science fiction 27 53 16 14 878
+// thanksgiving - comedy, animation, drama, 35 16 18
+// birthday - fantasy, music, comedy, drama, romance 14 10402 35 18 10749
+// chistmas - fantasy, music, comedy, drama, romance 14 10402 35 18 10749
+// newyear - fantasy, music, comedy, drama, romance 14 10402 35 18 10749
 
-<<<<<<< Updated upstream
-function HILAUREL (){
 
-=======
   const valentinesDay = $('#Valentines');
   const Patrick = $('#Patrick');
   const Independence = $('#Independence');
@@ -114,62 +119,134 @@ function HILAUREL (){
   $('#Valentines').on('click', function(){
     // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
        // set up API fetch depending on holiday parameters
-       displayMovie()
-  });
+       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=Valentines&page=1&include_adult=false"
+      //  change ID automatically would be great
+
+       fetch(finalUrl)
+       .then(function (response) {
+         // console.log(response)
+       return response.json();
+       })
+       .then(function (data) {
+         console.log(data)
+         }
+   )
+   });
 
   $('#Patrick').on('click', function(){
     // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
        // set up API fetch depending on holiday parameters
-  });
+       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=Patrick&page=1&include_adult=false"
+       //  change ID automatically would be great
+ 
+        fetch(finalUrl)
+        .then(function (response) {
+          // console.log(response)
+        return response.json();
+        })
+        .then(function (data) {
+          console.log(data)
+          }
+    )
+    });
 
   $('#Halloween').on('click', function(){
     // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
        // set up API fetch depending on holiday parameters
-  });
+       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=Halloween&page=1&include_adult=false"
+       //  change ID automatically would be great
+ 
+        fetch(finalUrl)
+        .then(function (response) {
+          // console.log(response)
+        return response.json();
+        })
+        .then(function (data) {
+          console.log(data)
+          }
+    )
+    });
 
   $('#Thanksgiving').on('click', function(){
     // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
        // set up API fetch depending on holiday parameters
-  });
+       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=Thanksgiving&page=1&include_adult=false"
+       //  change ID automatically would be great
+ 
+        fetch(finalUrl)
+        .then(function (response) {
+          // console.log(response)
+        return response.json();
+        })
+        .then(function (data) {
+          console.log(data)
+          }
+    )
+    });
 
   $('#Christmas').on('click', function(){
-    window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
        // set up API fetch depending on holiday parameters
-  });
+       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=Christmas&page=1&include_adult=false"
+       //  change ID automatically would be great
+ 
+        fetch(finalUrl)
+        .then(function (response) {
+          // console.log(response)
+        return response.json();
+        })
+        .then(function (data) {
+          console.log(data)
+          }
+    )
+    });
 
   $('#NewYear').on('click', function(){
-    window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
        // set up API fetch depending on holiday parameters
-  });
+       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=NewYearEve&page=1&include_adult=false"
+       //  change ID automatically would be great
+ 
+        fetch(finalUrl)
+        .then(function (response) {
+          // console.log(response)
+        return response.json();
+        })
+        .then(function (data) {
+          console.log(data)
+          }
+    )
+    });
 
   $('#Independence').on('click', function(){
-    window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
        // set up API fetch depending on holiday parameters
-  });
-
+       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=IndependenceDay&page=1&include_adult=false"
+       //  change ID automatically would be great
+ 
+        fetch(finalUrl)
+        .then(function (response) {
+          // console.log(response)
+        return response.json();
+        })
+        .then(function (data) {
+          console.log(data)
+          }
+    )
+    });
   $('#Muertos').on('click', function(){
-    window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
        // set up API fetch depending on holiday parameters
-  });
-
-
-  function  displayMovie() {
-    let id = genres.id;
-    // fetches genre list
-    // var finalUrl = "https://api.themoviedb.org/3/genre/movie/list?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
-    // fetches one movie
-    // var finalUrl = "https://api.themoviedb.org/3/movie/9648?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
-    var finalUrl = "https://api.themoviedb.org/3/genre/10752/movies?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&include_adult=false"
-    
-
-    fetch(finalUrl)
-    .then(function (response) {
-      // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-      console.log(data)
-      }
-)
->>>>>>> Stashed changes
-};
+       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=birthday&page=1&include_adult=false"
+       //  change ID automatically would be great
+ 
+        fetch(finalUrl)
+        .then(function (response) {
+          // console.log(response)
+        return response.json();
+        })
+        .then(function (data) {
+          console.log(data)
+          }
+    )
+    });
