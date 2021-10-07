@@ -5,7 +5,7 @@ var APIMovie = "d58ec33864c2c1ca7cfddcf6e0b283c8"; //Valerii
 $('#valentines').on('click', function(){
 
 
-    changePage2 ();
+    // changePage2 ();
 });
 
 
