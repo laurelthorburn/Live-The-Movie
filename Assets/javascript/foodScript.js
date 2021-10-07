@@ -3,7 +3,7 @@ var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 
 
 $('#valentines').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "valentine" + "&number=2" +  foodAPI;
+    var finalFoodUrl = foodBaseURL + "heart" + "&number=2" +  foodAPI;
     console.log(finalFoodUrl);
     
     fetch(finalFoodUrl)
