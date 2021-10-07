@@ -34,10 +34,10 @@ const mainMovie = document.getElementById('mainMovie');
        return response.json();
        })
        .then(function (data) {
-         console.log(data)
+         console.log(data) //i'm important
          }
    )
-   changePage2();
+  
    });
 
   $('#patrick').on('click', function(){
@@ -158,8 +158,5 @@ const mainMovie = document.getElementById('mainMovie');
     )
     });
 
-    function changePage2(){
-      window.location = "indexresults.html"
-    };
 
 
