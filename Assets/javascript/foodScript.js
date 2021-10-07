@@ -12,7 +12,17 @@ $('#valentines').on('click', function(){
     return response.json();
     })
     .then(function (data) {
-        console.log(data) 
+        changePage2();
+        console.log(data);  
+        document.getElementsByClassName('food-container').innerHTML = 'this is a test';
+
+        //data.results[0].image
+        //data.results[0].title
+        //data.results[1].image
+        //data.results[1].title
+
+
+
     }
 )
 });
@@ -121,3 +131,7 @@ $('#newYear').on('click', function(){
 )
 });
 
+
+function changePage2(){
+    window.location = "indexresults.html"
+  };

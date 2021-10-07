@@ -12,6 +12,6 @@ $('#valentines').on('click', function(){
 
 
 
-function changePage2(){
-    window.location = "indexresults.html"
-  };
+// function changePage2(){
+//     window.location = "indexresults.html"
+//   };
