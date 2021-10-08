@@ -1,29 +1,122 @@
+*{
+    margin: none;
+    padding: none;
+}
+
 body {
     background-color:rgba(127, 213, 216, 0.152)
 }
 
 header {
-    display: block;
-    justify-content: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 h1 {
-    text-align: center;
     font-family: 'Kristi', cursive;
-    font-size: 200px;
+    font-size: 65px;
+    margin: none;
+    background: -webkit-linear-gradient(rgb(155, 155, 155), rgb(25, 25, 25));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #introduction {
-    font-size: 32px;
-    margin: 50px 500px;
-    width: 1000px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+    width: 900px;
+    font-family: 'Arima Madurai', cursive;
+
 }
 
 .card:hover{
-    opacity: 50%;
+    opacity: 90%;
 }
 
 img {
-    height: 200px;
+    height: 185px;
+}
+.card-title {
+    font-family: 'Arima Madurai', cursive;
+}
+
+.card-action{
+    display: flex;
+    justify-content: center;
+}
+
+/* CSS */
+.button-55 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+#valentines:hover{
+    background-color: pink;
+}
+
+#patrick:hover{
+    background-color: rgba(21, 169, 21, 0.659);
+}
+
+#independence:hover{
+    background-color: rgba(53, 53, 253, 0.551);
+}
+
+#halloween:hover{
+    background-color: rgba(255, 166, 0, 0.653);
+}
+
+#thanksgiving:hover{
+    background-color: rgba(165, 42, 42, 0.455);
+}
+
+#birthday:hover{
+    background-color: rgba(255, 255, 0, 0.537);
+}
+
+#christmas:hover{
+    background-color: rgba(7, 50, 7, 0.626);
+}
+
+#newYear:hover{
+    background-color: rgba(135, 21, 169, 0.659);
 }

@@ -12,13 +12,8 @@
   .side {
     grid-area: sidebar;
     background-color: crimson;
-    height: 500px;
   }
-  .music {
-    grid-area: music;
-    background-color: aqua;
-    height: 250px;
-  }
+
   .main-footer {
     grid-area: footer;
     background-color: darkmagenta;
@@ -33,7 +28,6 @@
       "nav"
       "content"
       "sidebar"
-      "music"
       "footer";
   }
 
@@ -43,7 +37,7 @@
       grid-template-areas:
         "header header  header"
         "content content     sidebar"
-        "content content     music"
+        "content content     sidebar"
         "footer footer  footer"
      }
 

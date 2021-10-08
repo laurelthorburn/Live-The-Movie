@@ -1,10 +1,10 @@
 // TMBD api keys
 
-const apiKey = 'api_key=d58ec33864c2c1ca7cfddcf6e0b283c8';
+const apiMovieKey = 'api_key=d58ec33864c2c1ca7cfddcf6e0b283c8';
 const baseUrl = 'https://api.themoviedb.org/3';
-const apiUrl = baseUrl + '/discover/movie?sort_by=popularity.desc&'+ apiKey;
+const apiUrl = baseUrl + '/discover/movie?sort_by=popularity.desc&'+ apiMovieKey;
 const posterUrl = 'https://image.tmdb.org/t/p/w500';
-const searchURL = baseUrl + '/search/movie?'+ apiKey;
+const searchURL = baseUrl + '/search/movie?'+ apiMovieKey;
 
 
 // Element that will show our search results
@@ -27,16 +27,17 @@ const mainMovie = document.getElementById('mainMovie');
        // set up API fetch depending on holiday parameters
        var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=Valentines&page=1&include_adult=false"
       //  change ID automatically would be great
-
+    console.log("YAY you picked Valentine's");
        fetch(finalUrl)
        .then(function (response) {
          // console.log(response)
        return response.json();
        })
        .then(function (data) {
-         console.log(data)
+         console.log(data) //i'm important
          }
    )
+  
    });
 
   $('#patrick').on('click', function(){
@@ -156,3 +157,6 @@ const mainMovie = document.getElementById('mainMovie');
           }
     )
     });
+
+
+
