@@ -92,8 +92,8 @@ const mainMovie = document.getElementById('mainMovie');
         })
         .then(function (data) {
           console.log(data)
-          }
-    )
+          })
+        
     });
 
   $('#Christmas').on('click', function(){
@@ -147,7 +147,7 @@ const mainMovie = document.getElementById('mainMovie');
     )
     });
   $('#Muertos').on('click', function(){
-    // window.open("file:///C:/Users/derzo/HOMEWORK/Live-The-Movie/indexresults.html");
+       window.open("indexresults.html");
        // set up API fetch depending on holiday parameters
        var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=birthday&page=1&include_adult=false"
        //  change ID automatically would be great
@@ -162,3 +162,34 @@ const mainMovie = document.getElementById('mainMovie');
           }
     )
     });
+
+
+
+
+  $('#test').on('click', function(){
+    // set up API fetch depending on holiday parameters
+    var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=birthday&page=1&include_adult=false"
+    //  change ID automatically would be great
+     fetch(finalUrl)
+       .then(function (response) {
+        // console.log(response)
+     return response.json();
+       })
+       .then(function (data) {
+         console.log(data)
+         var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[4].backdrop_path;
+         var i = 1;
+         var description = data.results[i].overview;
+         var title = data.results[i].original_title
+         var posterImg = '<span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">' + imgLink + '</span>'
+         var rating = data.results[i].vote_average
+         //  works for description fetch and display
+         $('#description').text(description);
+        //  works for title fetch and display
+         $('#title').text(title);
+        //  doesnt work
+        //  $('#posterIMG').text(posterIMG);
+         $('#rating').text("Rating: " + rating);
+         console.log(posterImg);
+       })
+   });
