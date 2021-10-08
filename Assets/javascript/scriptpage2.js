@@ -4,7 +4,7 @@ var modalBg = document.querySelector('.modal-background');
 var foodAPI = "&apiKey=3d950f2860e74e5a949e59ac3b5f4126";
 var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 var savedHoliday = JSON.parse(localStorage.getItem("savedHoliday"));
-var displayFood = document.getElementById('food-container').innerHTML;
+var displayFood = document.getElementById('food-container');
 
 console.log(savedHoliday)
 
@@ -33,14 +33,26 @@ fetch(finalFoodUrl)
 return response.json();
 })
 .then(function (data) {
-    console.log(data);  //works
-    console.log(data.results[0].image); //works
-    console.log(document.getElementsByClassName('food-container')); //works
-    displayFood = '<img src="' + data.results[0].image + '"></img>'; //doesn't work
-    //data.results[0].image
-    //data.results[0].title
-    //data.results[1].image
-    //data.results[1].title
+ //picture and title one
+    var pictureOne = document.createElement('img');
+    var titleOne = document.createElement('h3');
+
+    pictureOne.setAttribute("src", data.results[0].image);
+    titleOne.innerText = data.results[0].title;
+
+    displayFood.append(titleOne);
+    displayFood.append(pictureOne); 
+
+ //picture and title two
+ var pictureTwo = document.createElement('img');
+ var titleTwo = document.createElement('h3');
+
+ pictureTwo.setAttribute("src", data.results[1].image);
+ titleTwo.innerText = data.results[1].title;
+
+ displayFood.append(titleTwo);
+ displayFood.append(pictureTwo); 
+
 
     //how do i pull recipe link? ID doesn't work
 }
