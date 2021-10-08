@@ -12,7 +12,6 @@ const mainMovie = document.getElementById('mainMovie');
 
 // fetched genres from https://api.themoviedb.org/3/genre/movie/list?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8
 
-
   const valentinesDay = $('#valentines');
   const patrick = $('#patrick');
   const independence = $('#independence');
