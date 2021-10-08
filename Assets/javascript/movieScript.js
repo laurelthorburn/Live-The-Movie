@@ -189,6 +189,7 @@ const mainMovie = document.getElementById('mainMovie');
         //  doesnt work
         //  $('#posterIMG').text(posterIMG);
          $('#rating').text("Rating: " + rating);
+        //  cant get it to create the element
          console.log(posterImg);
        })
    });
