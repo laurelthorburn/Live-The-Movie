@@ -29,3 +29,7 @@ h1 {
 img {
     height: 200px;
 }
+.card-title {
+    font-family: 'Kristi', cursive;
+}
+

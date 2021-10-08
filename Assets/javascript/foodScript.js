@@ -1,137 +1,81 @@
-var foodAPI = "&apiKey=3d950f2860e74e5a949e59ac3b5f4126";
-var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 
+var userHoliday;
 
 $('#valentines').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "heart" + "&number=2" +  foodAPI;
-    console.log(finalFoodUrl);
-    
-    fetch(finalFoodUrl)
-    .then(function (response) {
-     // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-        changePage2();
-        console.log(data);  
-        document.getElementsByClassName('food-container').innerHTML = 'this is a test';
 
-        //data.results[0].image
-        //data.results[0].title
-        //data.results[1].image
-        //data.results[1].title
+    userHoliday = $('#valentines').attr('id');
+    console.log(userHoliday); //works
 
+    saveUserChoice(userHoliday);
+    changePage2();
 
-
-    }
-)
 });
 $('#patrick').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "irish" + "&number=2" +  foodAPI;
-    console.log(finalFoodUrl);
-    
-    fetch(finalFoodUrl)
-    .then(function (response) {
-     // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-        console.log(data) 
-    }
-)
+
+    userHoliday = $('#patrick').attr('id');
+    console.log(userHoliday); //works
+    saveUserChoice(userHoliday);
+    changePage2();
+
 });
 
 $('#independence').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "america" + "&number=2" +  foodAPI;
-    console.log(finalFoodUrl);
-    
-    fetch(finalFoodUrl)
-    .then(function (response) {
-     // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-        console.log(data) 
-    }
-)
+    userHoliday = $('#independence').attr('id');
+    console.log(userHoliday); //works
+    saveUserChoice(userHoliday);
+    changePage2();
+
 });
 
 $('#halloween').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "halloween" + "&number=2" +  foodAPI;
-    console.log(finalFoodUrl);
-    
-    fetch(finalFoodUrl)
-    .then(function (response) {
-     // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-        console.log(data) 
-    }
-)
+    userHoliday = $('#halloween').attr('id');
+    console.log(userHoliday); //works
+    saveUserChoice(userHoliday);
+    changePage2();
+
 });
 
 $('#thanksgiving').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "thanksgiving" + "&number=2" +  foodAPI;
-    console.log(finalFoodUrl);
-    
-    fetch(finalFoodUrl)
-    .then(function (response) {
-     // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-        console.log(data) 
-    }
-)
+    userHoliday = $('#thanksgiving').attr('id');
+    console.log(userHoliday); //works
+    saveUserChoice(userHoliday);
+    changePage2();
+
 });
 
 $('#birthday').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "cake" + "&number=2" +  foodAPI;
-    console.log(finalFoodUrl);
-    
-    fetch(finalFoodUrl)
-    .then(function (response) {
-     // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-        console.log(data) 
-    }
-)
+    userHoliday = $('#birthday').attr('id');
+    console.log(userHoliday); //works
+    saveUserChoice(userHoliday);
+    changePage2();
+
 });
 
 $('#christmas').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "christmas" + "&number=2" +  foodAPI;
-    console.log(finalFoodUrl);
-    
-    fetch(finalFoodUrl)
-    .then(function (response) {
-     // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-        console.log(data) 
-    }
-)
+    userHoliday = $('#christmas').attr('id');
+    console.log(userHoliday); //works
+    saveUserChoice(userHoliday);
+    changePage2();
+
 });
 
 $('#newYear').on('click', function(){
-    var finalFoodUrl = foodBaseURL + "champagne" + "&number=2" +  foodAPI;
-    console.log(finalFoodUrl);
-    
-    fetch(finalFoodUrl)
-    .then(function (response) {
-     // console.log(response)
-    return response.json();
-    })
-    .then(function (data) {
-        console.log(data) 
-    }
-)
+    userHoliday = $('#newYear').attr('id');
+    console.log(userHoliday); //works
+    saveUserChoice(userHoliday);
+    changePage2();
+
 });
+
+function saveUserChoice(holiday){
+
+    localStorage.setItem("savedHoliday", JSON.stringify(holiday));
+
+}
+
 
 
 function changePage2(){
-    window.location = "indexresults.html"
+    window.location = "indexresults.html";
+    console.log(userHoliday);
   };
