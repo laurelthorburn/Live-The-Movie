@@ -61,7 +61,7 @@ $('#newYear').on('click', function(){
 
 function saveUserChoice(holiday){
 
-    localStorage.setItem("savedHoliday", JSON.stringify(holiday));
+    localStorage.setItem("savedHoliday", holiday);
 
 }
 
@@ -69,3 +69,6 @@ function saveUserChoice(holiday){
 function changePage2(){
     window.location = "indexresults.html";
   };
+
+
+  
