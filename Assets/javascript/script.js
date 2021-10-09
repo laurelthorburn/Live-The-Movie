@@ -5,7 +5,9 @@ var fireworkBtn = document.getElementById('independence');
 var heartBtn = document.getElementById('valentines');
 var newYearBtn = document.getElementById('newYear');
 var birthdayBtn = document.getElementById('birthday');
-
+var irishBtn = document.getElementById('patrick');
+var halloweenBtn = document.getElementById('halloween');
+var thanksgivingBtn = document.getElementById('thanksgiving');
 
 //valentine's day
 heartBtn.onmouseover = function() {
@@ -49,5 +51,32 @@ newYearBtn.onmouseover = function() {
 }
 
 newYearBtn.onmouseout = function() {
+	body.className = '';
+}
+
+//St Patrick's Day
+irishBtn.onmouseover = function() {
+	body.className = 'irishbg';
+}
+
+irishBtn.onmouseout = function() {
+	body.className = '';
+}
+
+//Halloween
+halloweenBtn.onmouseover = function() {
+	body.className = 'halloweenbg';
+}
+
+halloweenBtn.onmouseout = function() {
+	body.className = '';
+}
+
+//Thanksgiving
+thanksgivingBtn.onmouseover = function() {
+	body.className = 'thanksgivingbg';
+}
+
+thanksgivingBtn.onmouseout = function() {
 	body.className = '';
 }
