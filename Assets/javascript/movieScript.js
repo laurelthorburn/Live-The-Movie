@@ -205,53 +205,44 @@ const mainMovie = document.getElementById('mainMovie');
                 $('#videoTag').attr("src", "https://www.youtube.com/embed/" + video.key);
                 console.log(video.key)
                 console.log(video.name)
-                
-              //   embed.push(`
-              //     <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              
-              // `)
-  
-              //   console.log(video.site)
 
-              
-              
               }
             })
         }
      })});
 
 
-     $('#test').on('click', function(){
-      // set up API fetch depending on holiday parameters
-      var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=2020&page=1&include_adult=false"
-      ;
-      //  change ID automatically would be great
-       fetch(finalUrl)
-         .then(function (response) {
-          // console.log(response)
-       return response.json();
-         })
-         .then(function (data) {
+//      $('#test').on('click', function(){
+//       // set up API fetch depending on holiday parameters
+//       var finalUrl = "https://api.themoviedb.org/3/search/movie?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US&query=2020&page=1&include_adult=false"
+//       ;
+//       //  change ID automatically would be great
+//        fetch(finalUrl)
+//          .then(function (response) {
+//           // console.log(response)
+//        return response.json();
+//          })
+//          .then(function (data) {
 
-          $("#movieCard").each(function (i) {
-            var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
-            var description = data.results[i].overview;
-            var title = data.results[i].original_title
-            var rating = data.results[i].vote_average
+//           $("#movieCard").each(function (i) {
+//             var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
+//             var description = data.results[i].overview;
+//             var title = data.results[i].original_title
+//             var rating = data.results[i].vote_average
 
-            $('#description').text(description);
-          //  works for title fetch and display
-           $('#title').text(title);
-          //  doesnt work
-           $('#posterIMGcard').attr("src", imgLink)
-           $('#rating').text("Rating: " + rating);
+//             $('#description').text(description);
+//           //  works for title fetch and display
+//            $('#title').text(title);
+//           //  doesnt work
+//            $('#posterIMGcard').attr("src", imgLink)
+//            $('#rating').text("Rating: " + rating);
 
 
-            this.querySelector("#description").textContent = description;
-            this.querySelector("#title").textContent = title;
-            this.querySelector("posterIMGcard").setAttribute("src", imgLink);
-            this.querySelector("#rating").textContent = "Rating: " + rating;
-          });
+//             this.querySelector("#description").textContent = description;
+//             this.querySelector("#title").textContent = title;
+//             this.querySelector("posterIMGcard").setAttribute("src", imgLink);
+//             this.querySelector("#rating").textContent = "Rating: " + rating;
+//           });
          
-         })
-     });
+//          })
+//      });
