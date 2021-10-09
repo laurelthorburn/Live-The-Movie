@@ -96,6 +96,7 @@ function showMovie(){
     })
     .then(function (data) {
         console.log(data)
+
       $(".card").each(function (i) {
   
         var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
@@ -124,6 +125,7 @@ function showMovie(){
               })
           }
        })
+
     }
     ) 
     })}
