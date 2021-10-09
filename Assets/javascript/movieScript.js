@@ -10,7 +10,7 @@
 //   var userChoice = localStorage.getItem('savedHoliday');
 //   var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + userChoice + "&page=1&include_adult=false"
 
-  
+
 
 //      $('#movie-trailer').on('click', function(){
 //       var trailer = "https://api.themoviedb.org/3/movie/716788/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
@@ -31,3 +31,4 @@
 
 
   
+
