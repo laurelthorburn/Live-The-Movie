@@ -66,17 +66,20 @@
 
     <div class="col m3">
       <div class="card">
-        <div class="card-image">
-          <img src="http://www.ilikewallpaper.net/ipad-wallpapers/download/2268/Square-Pattern-ipad-wallpaper-ilikewallpaper_com.jpg">
-          <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Sample3</span>
+        <div id = "posterIMG" class="card-image">
+          <img id = "posterIMGcard" src="http://www.ilikewallpaper.net/ipad-wallpapers/download/2268/Square-Pattern-ipad-wallpaper-ilikewallpaper_com.jpg">
+          <span id = "title" class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);"></span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+          <p id = "description"></p>
         </div>
         <div class="card-action">
-          <button id ="movie-trailer" class="button-55" role="button">
+          
+          <p id = "rating"></p>
+          <button id = "test" class="button-55" role="button">
             View Trailer
           </button>
+
         </div>
       </div>
     </div>
@@ -84,11 +87,11 @@
     <div class="col m3">
       <div class="card">
         <div class="card-image">
-          <img src="http://www.ilikewallpaper.net/ipad-wallpapers/download/2268/Square-Pattern-ipad-wallpaper-ilikewallpaper_com.jpg">
+          <img  src="http://www.ilikewallpaper.net/ipad-wallpapers/download/2268/Square-Pattern-ipad-wallpaper-ilikewallpaper_com.jpg">
           <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Sample4</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+          <p ></p>
         </div>
         <div class="card-action">
           <button id ="movie-trailer" class="button-55" role="button">
@@ -103,40 +106,39 @@
 
 
 <!-- Modal for movie trailers -->
-<div class="modal">
+<!-- <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title">Modal title</p>
       <button class="delete" aria-label="close"></button>
     </header>
-    <section class="modal-card-body">
+    <section class="modal-card-body"> -->
       <!-- Content ... -->
-    </section>
+    <!-- </section>
     <footer class="modal-card-foot">
+
+        <footer id = "testVideo" class="main-footer">
+<iframe id = "videoTag" src="" frameborder="0"></iframe>
       <button class="button is-success">Save changes</button>
       <button class="button">Cancel</button>
     </footer>
   </div>
-</div>
-
+</div> -->
+      
 
         <!-- Food/Spoonacular -->
         <aside class="side"><h2 id = "recipe-header">Recipes</h2><div id="food-container"></div></aside>
 
       <!-- Footer with back button -->
-        <footer class="main-footer">
+        <footer>
           
           <button id="go-back" class="button-55" role="button">Go Back</button>
-
-
 
         </footer>
       </div>
 
 
-
-      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="./Assets/javascript/SearchingPage.js"></script>
