@@ -95,6 +95,8 @@ function showMovie(){
     return response.json();
     })
     .then(function (data) {
+        console.log(data)
+
       $(".card").each(function (i) {
   
         var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
@@ -106,8 +108,24 @@ function showMovie(){
         this.querySelector("#title").textContent = title;
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
         this.querySelector("#rating").textContent = "Rating: " + rating;
-  
-    
+        
+        var trailer = "https://api.themoviedb.org/3/movie/"+ data.results[i].id + "/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
+        fetch(trailer).then(res => res.json()).then(videoData => {
+            if(videoData.results.length > 0){
+              
+              // var embed =  $('#testVideo');
+              // var embed = [];
+                videoData.results.forEach((video, idx) => {
+                let {name, key, site} = video
+                if(site == 'YouTube'){
+                  $('#videoTag').attr("src", "https://www.youtube.com/embed/" + video.key);
+                  console.log(video.key)
+                  console.log(video.name)
+                }
+              })
+          }
+       })
+
     }
     ) 
     })}
@@ -117,8 +135,10 @@ function showMovie(){
 // toggling modal
 movieTrailer.addEventListener('click', () => {
     modal.classList.add('is-active');
+    
 });
 
 modalBg.addEventListener('click', () => {
     modal.classList.remove('is-active')
+    
 })
