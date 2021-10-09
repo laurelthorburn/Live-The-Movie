@@ -31,6 +31,7 @@ var objectFood = {
     independence: "american"
 }
 
+// an object to define the search query for movies
 var objectMovie = {
     valentines: "valentines", 
     patrick: "st-patrick",
@@ -109,6 +110,7 @@ function showMovie(){
         console.log(data)
         
       $(".card").each(function (i) {
+        // if poster is missing - select next movie
         if (data.results[i].poster_path == null){
           i = i + 2;
         }
@@ -122,12 +124,11 @@ function showMovie(){
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
         this.querySelector("#rating").textContent = "Rating: " + rating;
         
+        // fetching info for displaing trailers in the modal
+
         var trailer = "https://api.themoviedb.org/3/movie/"+ data.results[i].id + "/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
         fetch(trailer).then(res => res.json()).then(videoData => {
             if(videoData.results.length > 0){
-              
-              // var embed =  $('#testVideo');
-              // var embed = [];
                 videoData.results.forEach((video, idx) => {
                 let {name, key, site} = video
                 if(site == 'YouTube'){
