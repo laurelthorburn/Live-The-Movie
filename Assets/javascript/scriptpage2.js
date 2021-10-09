@@ -63,7 +63,6 @@ return response.json();
 
  console.log("https://spoonacular.com/recipes/" + data.results[1].title + "-" + data.results[1].id)
 
-    //how do i pull recipe link? ID doesn't work
 }
 ) 
 }

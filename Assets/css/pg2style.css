@@ -42,14 +42,14 @@
 }
 
 h3 {
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: 'Arima Madurai', cursive;
   margin: 15px 0;
   text-decoration: underline;
 }
   
   .wrapper {
     display: grid;
-    gap: 20px;
+    gap: 2px;
     grid-template-areas:
       "header"
       "nav"
