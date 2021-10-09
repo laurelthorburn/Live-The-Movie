@@ -39,11 +39,12 @@ return response.json();
     var titleOne = document.createElement('h3');
 
     linkOne.setAttribute("href","https://spoonacular.com/recipes/" + data.results[0].title + "-" + data.results[0].id);
+    linkOne.setAttribute('target', '_blank');
     pictureOne.setAttribute("src", data.results[0].image);
     titleOne.innerText = data.results[0].title;
 
+    linkOne.append(titleOne);
     linkOne.append(pictureOne);
-    displayFood.append(titleOne);
     displayFood.append(linkOne); 
 
  //picture and title two
@@ -52,11 +53,12 @@ return response.json();
  var titleTwo = document.createElement('h3');
 
  linkTwo.setAttribute("href","https://spoonacular.com/recipes/" + data.results[1].title + "-" + data.results[1].id);
+ linkTwo.setAttribute('target', '_blank');
  pictureTwo.setAttribute("src", data.results[1].image);
  titleTwo.innerText = data.results[1].title;
 
+ linkTwo.append(titleTwo);
  linkTwo.append(pictureTwo);
- displayFood.append(titleTwo);
  displayFood.append(linkTwo); 
 
  console.log("https://spoonacular.com/recipes/" + data.results[1].title + "-" + data.results[1].id)
