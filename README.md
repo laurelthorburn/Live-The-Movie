@@ -23,9 +23,9 @@ ACCEPTANCE CRITERIA HERE
 
 # Links
 
-Github: LINK HERE
+Github: https://github.com/laurelthorburn/Live-The-Movie
 
-Deployed Site: LINK HERE
+Deployed Site: https://laurelthorburn.github.io/Live-The-Movie/
 
 
 # Resources/Credit
