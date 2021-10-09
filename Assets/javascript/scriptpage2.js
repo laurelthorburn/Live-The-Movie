@@ -1,6 +1,7 @@
 var movieTrailer = document.getElementById('movie-trailer');
 var modal = document.querySelector('.modal');
 var modalBg = document.querySelector('.modal-background');
+
 var foodAPI = "&apiKey=d0f4f19f4b444b67846287c205775f1c";
 var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 var savedHoliday = localStorage.getItem("savedHoliday");
@@ -16,9 +17,7 @@ const apiUrl = baseUrl + '/discover/movie?sort_by=popularity.desc&'+ apiMovieKey
 const posterUrl = 'https://image.tmdb.org/t/p/w500';
 
   var userChoice = localStorage.getItem('savedHoliday');
- 
   
-
 //dictionary
 var objectFood = {
     valentines: "heart", 
@@ -100,7 +99,9 @@ $('#go-back').click(function(){
 function showMovie(){
   
     var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
+
     console.log ("query is " + objectMovie[savedHoliday]);
+
     console.log(finalUrl)
     fetch(finalUrl)
     .then(function (response) {
