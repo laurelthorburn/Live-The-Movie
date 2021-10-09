@@ -26,7 +26,22 @@ body.newYears {
 
 body.bdaybg {
     background-image: url('../Media/confettibg.gif');
+}
+body.irishbg {
+    background-image: url('../Media/irishbg.gif');
+    background-repeat: no-repeat;
+}
 
+body.halloweenbg {
+    background-image: url('../Media/spookybg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.thanksgivingbg {
+    background-image: url('../Media/thanksgivingbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header {
     display: flex;
