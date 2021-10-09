@@ -7,6 +7,27 @@ body {
     background-color:rgba(127, 213, 216, 0.152)
 }
 
+body.christmasbg {
+    background-image: url('../Media/snowfallingbg.gif');
+}
+body.independencebg {
+    background-image: url('../Media/flag.png');
+    background-size: cover;
+}
+
+body.valentinebg {
+    background-image: url('../Media/heartbg.gif');
+}
+
+body.newYears {
+    background-image: url('../Media/fireworksbg.gif');
+    background-repeat: no-repeat;
+}
+
+body.bdaybg {
+    background-image: url('../Media/confettibg.gif');
+
+}
 header {
     display: flex;
     flex-direction: column;
@@ -98,7 +119,7 @@ img {
 }
 
 #independence:hover{
-    background-color: rgba(53, 53, 253, 0.551);
+    background-color: rgba(0, 0, 255, 0.517);
 }
 
 #halloween:hover{
@@ -120,3 +141,7 @@ img {
 #newYear:hover{
     background-color: rgba(135, 21, 169, 0.659);
 }
+
+/* button:hover {
+    pointer-events: stroke;
+} */
