@@ -1,6 +1,7 @@
 var movieTrailer = document.getElementById('movie-trailer');
 var modal = document.querySelector('.modal');
 var modalBg = document.querySelector('.modal-background');
+
 var foodAPI = "&apiKey=d0f4f19f4b444b67846287c205775f1c";
 var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 var savedHoliday = localStorage.getItem("savedHoliday");
@@ -107,6 +108,7 @@ function showMovie(){
     })
     .then(function (data) {
         console.log(data)
+
       $(".card").each(function (i) {
   
         var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
