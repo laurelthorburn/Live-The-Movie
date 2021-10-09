@@ -157,7 +157,8 @@ img {
     background-color: rgba(135, 21, 169, 0.659);
 }
 
-@media screen and (max-width: 450px) {
+/* Cellphones */
+@media screen and (max-width: 600px) {
 
     header {
         text-align: center;
@@ -173,6 +174,23 @@ img {
     }
    img {
        max-width: 200px;
+   }
+
+  }
+
+  /* Tablets */
+  @media screen and (max-width: 950px) {
+
+    header {
+        text-align: center;
+    }
+    #introduction {
+        width: 100%;
+    }
+  
+   img {
+       min-height: 200px;
+       max-height: 200px;
    }
 
   }
