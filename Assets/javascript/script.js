@@ -1,17 +1,53 @@
-var APIFood = "3d950f2860e74e5a949e59ac3b5f4126"; //Matt
-var APIMovie = "d58ec33864c2c1ca7cfddcf6e0b283c8"; //Valerii
+// creating button hover effects on main page
+var body = document.body;
+var christmasBtn = document.getElementById('christmas');
+var fireworkBtn = document.getElementById('independence');
+var heartBtn = document.getElementById('valentines');
+var newYearBtn = document.getElementById('newYear');
+var birthdayBtn = document.getElementById('birthday');
 
 
-$('#valentines').on('click', function(){
+//valentine's day
+heartBtn.onmouseover = function() {
+	body.className = 'valentinebg';
+}
 
+heartBtn.onmouseout = function() {
+	body.className = '';
+}
 
-    // changePage2 ();
-});
+//independence day
+fireworkBtn.onmouseover = function() {
+	body.className = 'independencebg';
+}
 
+fireworkBtn.onmouseout = function() {
+	body.className = '';
+}
 
+//birthday
+birthdayBtn.onmouseover = function() {
+	body.className = 'bdaybg';
+}
 
+birthdayBtn.onmouseout = function() {
+	body.className = '';
+}
 
+//christmas
+christmasBtn.onmouseover = function() {
+	body.className = 'christmasbg';
+}
 
-// function changePage2(){
-//     window.location = "indexresults.html"
-//   };
+christmasBtn.onmouseout = function() {
+	body.className = '';
+}
+
+//New Year's
+newYearBtn.onmouseover = function() {
+	body.className = 'newYears';
+}
+
+newYearBtn.onmouseout = function() {
+	body.className = '';
+}
