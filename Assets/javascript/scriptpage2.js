@@ -16,7 +16,7 @@ const apiUrl = baseUrl + '/discover/movie?sort_by=popularity.desc&'+ apiMovieKey
 const posterUrl = 'https://image.tmdb.org/t/p/w500';
 
   var userChoice = localStorage.getItem('savedHoliday');
-  var query = userChoice
+ 
   
 
 //dictionary
@@ -33,7 +33,7 @@ var objectFood = {
 
 var objectMovie = {
     valentines: "valentines", 
-    patrick: "patrick",
+    patrick: "st-patrick",
     christmas: "christmas", 
     halloween: "halloween",
     birthday: "birthday", 
@@ -99,7 +99,7 @@ $('#go-back').click(function(){
 function showMovie(){
   
     var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
-    console.log ("query is " + query);
+    console.log ("query is " + objectMovie[savedHoliday]);
     console.log(finalUrl)
     fetch(finalUrl)
     .then(function (response) {
@@ -107,8 +107,11 @@ function showMovie(){
     })
     .then(function (data) {
         console.log(data)
+        
       $(".card").each(function (i) {
-  
+        if (data.results[i].poster_path == null){
+          i = i + 2;
+        }
         var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
         var description = data.results[i].overview;
         var title = data.results[i].original_title
