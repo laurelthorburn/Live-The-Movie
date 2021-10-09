@@ -135,7 +135,7 @@ h3 {
 }
 
 
-  @media (min-width: 700px) {
+  @media (min-width: 1401px) {
     .wrapper {
       grid-template-columns: 1fr 4fr 1fr;
       grid-template-areas:
@@ -147,7 +147,8 @@ h3 {
 
   }
 
-  @media screen and (max-width: 699px) {
+
+  @media screen and (max-width: 749px) {
     .wrapper {
       grid-template-columns: 1fr;
       grid-template-areas:

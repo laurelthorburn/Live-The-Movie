@@ -1,4 +1,8 @@
-var movieTrailer = document.getElementById('movie-trailer');
+var movieTrailerOne = document.getElementById('movie-trailer-one');
+var movieTrailerTwo = document.getElementById('movie-trailer-two');
+var movieTrailerThree = document.getElementById('movie-trailer-three');
+var movieTrailerFour = document.getElementById('movie-trailer-four');
+
 var modal = document.querySelector('.modal');
 var modalBg = document.querySelector('.modal-background');
 
@@ -146,7 +150,19 @@ function showMovie(){
 
 
 // toggling modal
-movieTrailer.addEventListener('click', () => {
+movieTrailerOne.addEventListener('click', () => {
+    modal.classList.add('is-active');
+    
+});
+movieTrailerTwo.addEventListener('click', () => {
+    modal.classList.add('is-active');
+    
+});
+movieTrailerThree.addEventListener('click', () => {
+    modal.classList.add('is-active');
+    
+});
+movieTrailerFour.addEventListener('click', () => {
     modal.classList.add('is-active');
     
 });
