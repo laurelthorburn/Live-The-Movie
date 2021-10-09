@@ -80,3 +80,9 @@ thanksgivingBtn.onmouseover = function() {
 thanksgivingBtn.onmouseout = function() {
 	body.className = '';
 }
+
+@media (min-width: 450px) {
+    body {
+      background-color: tomato;
+    }
+  }
