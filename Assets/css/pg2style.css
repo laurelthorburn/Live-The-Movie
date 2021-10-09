@@ -146,3 +146,25 @@ h3 {
      }
 
   }
+
+  @media screen and (max-width: 699px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "content"
+        "content"
+        "content"
+        "sidebar"
+        "footer"
+     }
+    h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    } 
+
+iframe {
+  width: 250px;
+  height: auto;
+}
+  }
