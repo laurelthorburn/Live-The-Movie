@@ -20,7 +20,7 @@ const language = "&language=en-US&";
 const apiUrl = baseUrl + '/discover/movie?sort_by=popularity.desc&'+ apiMovieKey;
 const posterUrl = 'https://image.tmdb.org/t/p/w500';
 
-//pulls page one input from local storage
+
 var userChoice = localStorage.getItem('savedHoliday');
   
 //dictionary
@@ -35,6 +35,7 @@ var objectFood = {
     independence: "american"
 }
 
+// an object to define the search query for movies
 var objectMovie = {
     valentines: "valentines", 
     patrick: "st-patrick",
@@ -115,21 +116,17 @@ $('#go-back').click(function(){
 });
 
 // movie function display
+
+var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
+
 function showMovie(){
-  
-    var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
-
-    // console.log ("query is " + objectMovie[savedHoliday]);
-
-    // console.log(finalUrl)
     fetch(finalUrl)
     .then(function (response) {
     return response.json();
     })
     .then(function (data) {
-        // console.log(data)
-        
       $(".card").each(function (i) {
+        // if poster is missing - select next movie
         if (data.results[i].poster_path == null){
           i = i + 2;
         }
@@ -141,28 +138,36 @@ function showMovie(){
         this.querySelector("#description").textContent = description;
         this.querySelector("#title").textContent = title;
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
-        this.querySelector("#rating").textContent = "Rating: " + rating;
-        
-        var trailer = "https://api.themoviedb.org/3/movie/"+ data.results[i].id + "/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
-        fetch(trailer).then(res => res.json()).then(videoData => {
-            if(videoData.results.length > 0){
-              
-              // var embed =  $('#testVideo');
-              // var embed = [];
-                videoData.results.forEach((video, idx) => {
-                let {name, key, site} = video
-                if(site == 'YouTube'){
-                  $('#videoTag').attr("src", "https://www.youtube.com/embed/" + video.key);
-                  // console.log(video.key)
-                  // console.log(video.name)
-                }
-              })
-          }
-       })
+        this.querySelector("#rating").textContent = "Rating: " + rating + "i= " + i ;
+      
     }
     ) 
     })}
 
+    // fetching info for displaing trailers in the modal
+
+    function showTrailer(i){
+      fetch(finalUrl)
+    .then(function (response) {
+    return response.json();
+    })
+    .then(function (data) {
+      // if no trailer - add a picture that says "no trailer found"
+      var trailer = "https://api.themoviedb.org/3/movie/"+ data.results[i].id + "/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
+      fetch(trailer).then(res => res.json()).then(videoData => {
+        if(videoData.results.length > 0){
+            videoData.results.forEach((video, idx) => {
+            let {name, key, site} = video
+            if(site == 'YouTube'){
+              $('#videoTag').attr("src", "https://www.youtube.com/embed/" + video.key);
+              // console.log(video.key)
+              // console.log(video.name)
+            }
+          })
+      }
+   })
+    })
+    }
 
 //changing background of page two depending on holiday selected
 console.log(userChoice);
@@ -190,19 +195,23 @@ if (userChoice === "valentines"){
 // toggling modal
 movieTrailerOne.addEventListener('click', () => {
     modal.classList.add('is-active');
-    
+    let i = 0;
+    showTrailer(i);
 });
 movieTrailerTwo.addEventListener('click', () => {
     modal.classList.add('is-active');
-    
+    let i = 1;
+    showTrailer(i); 
 });
 movieTrailerThree.addEventListener('click', () => {
     modal.classList.add('is-active');
-    
+    let i = 2;
+    showTrailer(i); 
 });
 movieTrailerFour.addEventListener('click', () => {
     modal.classList.add('is-active');
-    
+    let i = 3;
+    showTrailer(i); 
 });
 
 modalBg.addEventListener('click', () => {
