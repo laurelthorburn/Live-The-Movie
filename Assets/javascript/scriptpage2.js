@@ -144,7 +144,7 @@ function showMovie(){
     ) 
     })}
 
-    // fetching info for displaing trailers in the modal
+    // fetching info for displaying trailers in the modal
 
     function showTrailer(i){
       fetch(finalUrl)
@@ -175,7 +175,7 @@ console.log(userChoice);
 if (userChoice === "valentines"){
   $('body').addClass("valentinebg");
 } else if (userChoice === "patrick"){
-  $('body').addClass("irishbg"); //change me
+  $('body').addClass("irishbg"); 
 } else if (userChoice === "independence"){
   $('body').addClass("independencebg");
 } else if (userChoice === "halloween"){
@@ -187,7 +187,7 @@ if (userChoice === "valentines"){
 } else if (userChoice === "christmas"){
   $('body').addClass("christmasbg");
 } else if (userChoice === "newYear"){
-  $('body').addClass("newYears"); //change me
+  $('body').addClass("newYears"); 
 } 
 
 
