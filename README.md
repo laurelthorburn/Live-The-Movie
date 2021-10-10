@@ -1,8 +1,10 @@
 # Live-The-Movie
-See the movie, live the movie. Not only will we help you determine which movie to watch, we'll help you create a unique night to remember.
+See the movie, live the movie. Not only will we help you determine which movie to watch, we'll help you create a unique holiday-themed night to remember.
 
 ## Description
-INSERT TEXT HERE (WHY DID YOU MAKE THIS (NOT B/C IT'S HOMEWORK)? WHAT DID YOU LEARN? WHAT DID IT SHOW YOU YOU NEED TO CONTINUE TO DEVELOP?)
+We created this project in order to provide our users with holiday filled evening.  Using javscript, css, and HTML, we created a holiday theme page from scratch that uses two third party APIs, Spoonacular and TMDB, to fetch holiday themed recipes and movies.
+
+Throughout this project, we continued to improve our javascript skills and further learned how to collaborate using github, a skill that had not yet been acquired for assignments as we had all gotten used to working alone until now.  Learning how to mange project tasks, fix merge issues, and build on collaboration was invaluable as we believe it has helped strength us as future team oriented coders.  We also enjoyed learning from one another and seeing how different one person's approach to a problem is than another's. 
 
 ## User Story
 
