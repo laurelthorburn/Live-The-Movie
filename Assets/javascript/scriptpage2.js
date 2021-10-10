@@ -139,25 +139,12 @@ function showMovie(){
         this.querySelector("#title").textContent = title;
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
         this.querySelector("#rating").textContent = "Rating: " + rating + "i= " + i ;
-        
-        // fetching info for displaing trailers in the modal
-
-      //   var trailer = "https://api.themoviedb.org/3/movie/"+ data.results[i].id + "/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
-      //   fetch(trailer).then(res => res.json()).then(videoData => {
-      //       if(videoData.results.length > 0){
-      //           videoData.results.forEach((video, idx) => {
-      //           let {name, key, site} = video
-      //           if(site == 'YouTube'){
-      //             $('#videoTag').attr("src", "https://www.youtube.com/embed/" + video.key);
-      //             // console.log(video.key)
-      //             // console.log(video.name)
-      //           }
-      //         })
-      //     }
-      //  })
+      
     }
     ) 
     })}
+
+    // fetching info for displaing trailers in the modal
 
     function showTrailer(i){
       fetch(finalUrl)
@@ -165,6 +152,7 @@ function showMovie(){
     return response.json();
     })
     .then(function (data) {
+      // if no trailer - add a picture that says "no trailer found"
       var trailer = "https://api.themoviedb.org/3/movie/"+ data.results[i].id + "/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
       fetch(trailer).then(res => res.json()).then(videoData => {
         if(videoData.results.length > 0){
