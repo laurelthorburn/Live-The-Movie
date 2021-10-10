@@ -20,7 +20,8 @@ const language = "&language=en-US&";
 const apiUrl = baseUrl + '/discover/movie?sort_by=popularity.desc&'+ apiMovieKey;
 const posterUrl = 'https://image.tmdb.org/t/p/w500';
 
-  var userChoice = localStorage.getItem('savedHoliday');
+//pulls page one input from local storage
+var userChoice = localStorage.getItem('savedHoliday');
   
 //dictionary
 var objectFood = {
@@ -29,7 +30,7 @@ var objectFood = {
     christmas: "christmas", 
     halloween: "halloween",
     birthday: "cake", 
-    newYear: "champagne",
+    newYear: "cocktail",
     thanksgiving: "thanksgiving",
     independence: "american"
 }
@@ -48,7 +49,9 @@ var objectMovie = {
 
 //use this object to access your stuff
 
-var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=2" +  foodAPI;
+var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=3" +  foodAPI;
+
+console.log(finalFoodUrl);
 
 //fetching spoonacular API
 window.onload = function (){
@@ -88,6 +91,19 @@ return response.json();
  linkTwo.append(pictureTwo);
  displayFood.append(linkTwo); 
 
+  //picture and title three
+  var linkThree = document.createElement('a');
+  var pictureThree = document.createElement('img');
+  var titleThree = document.createElement('h3');
+ 
+  linkThree.setAttribute("href","https://spoonacular.com/recipes/" + data.results[2].title + "-" + data.results[2].id);
+  linkThree.setAttribute('target', '_blank');
+  pictureThree.setAttribute("src", data.results[2].image);
+  titleThree.innerText = data.results[2].title;
+ 
+  linkThree.append(titleThree);
+  linkThree.append(pictureThree);
+  displayFood.append(linkThree); 
  
 showMovie();
 }

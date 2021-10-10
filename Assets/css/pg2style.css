@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    max-height: 625px;
   }
 
   #recipe-header{
@@ -23,6 +24,13 @@
     font-size: 50px;
   }
 
+  .side img {
+    height: 125px;
+  }
+
+  #posterIMGcard {
+    max-height: 350px;
+  }
 
   h1 {
     font-family: 'Kristi', cursive;
