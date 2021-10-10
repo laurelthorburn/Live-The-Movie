@@ -135,6 +135,45 @@ h3 {
   width: 100%;
 }
 
+/* backgrounds controlled by button click (dynamically added in scriptpage2.js */
+
+.christmasbg {
+  background-image: url('../Media/snowfallingbg.gif');
+}
+.independencebg {
+  background-image: url('../Media/flag.png');
+  background-size: cover;
+}
+
+.valentinebg {
+  background-image: url('../Media/heartbg.gif');
+}
+
+.newYears {
+  background-image: url('../Media/fireworksbg.gif');
+  background-repeat: no-repeat;
+}
+
+.bdaybg {
+  background-image: url('../Media/confettibg.gif');
+}
+.irishbg {
+  background-image: url('../Media/irishbg.gif');
+  background-repeat: no-repeat;
+}
+
+.halloweenbg {
+  background-image: url('../Media/spookybg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.thanksgivingbg {
+  background-image: url('../Media/thanksgivingbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
   @media (min-width: 1401px) {
     .wrapper {
       grid-template-columns: 1fr 4fr 1fr;

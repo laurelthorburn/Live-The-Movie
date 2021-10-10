@@ -9,6 +9,8 @@ var irishBtn = document.getElementById('patrick');
 var halloweenBtn = document.getElementById('halloween');
 var thanksgivingBtn = document.getElementById('thanksgiving');
 
+//functions change background on hover on main index (page one)
+
 //valentine's day
 heartBtn.onmouseover = function() {
 	body.className = 'valentinebg';

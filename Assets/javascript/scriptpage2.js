@@ -53,7 +53,7 @@ var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=2" +  foodA
 //fetching spoonacular API
 window.onload = function (){
 
-    console.log(savedHoliday)
+    // console.log(savedHoliday)
 fetch(finalFoodUrl)
 .then(function (response) {
 return response.json();
@@ -63,8 +63,8 @@ return response.json();
     var linkOne = document.createElement('a');
     var pictureOne = document.createElement('img');
     var titleOne = document.createElement('h3');
-    console.log(data)
-    console.log(finalFoodUrl)
+    // console.log(data)
+    // console.log(finalFoodUrl)
     linkOne.setAttribute("href","https://spoonacular.com/recipes/" + data.results[0].title + "-" + data.results[0].id);
     linkOne.setAttribute('target', '_blank');
     pictureOne.setAttribute("src", data.results[0].image);
@@ -103,15 +103,15 @@ function showMovie(){
   
     var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
 
-    console.log ("query is " + objectMovie[savedHoliday]);
+    // console.log ("query is " + objectMovie[savedHoliday]);
 
-    console.log(finalUrl)
+    // console.log(finalUrl)
     fetch(finalUrl)
     .then(function (response) {
     return response.json();
     })
     .then(function (data) {
-        console.log(data)
+        // console.log(data)
         
       $(".card").each(function (i) {
         if (data.results[i].poster_path == null){
@@ -137,8 +137,8 @@ function showMovie(){
                 let {name, key, site} = video
                 if(site == 'YouTube'){
                   $('#videoTag').attr("src", "https://www.youtube.com/embed/" + video.key);
-                  console.log(video.key)
-                  console.log(video.name)
+                  // console.log(video.key)
+                  // console.log(video.name)
                 }
               })
           }
@@ -146,6 +146,28 @@ function showMovie(){
     }
     ) 
     })}
+
+
+//changing background of page two depending on holiday selected
+console.log(userChoice);
+
+if (userChoice === "valentines"){
+  $('body').addClass("valentinebg");
+} else if (userChoice === "patrick"){
+  $('body').addClass("irishbg"); //change me
+} else if (userChoice === "independence"){
+  $('body').addClass("independencebg");
+} else if (userChoice === "halloween"){
+  $('body').addClass("halloweenbg");
+} else if (userChoice === "thanksgiving"){
+  $('body').addClass("thanksgivingbg");
+} else if (userChoice === "birthday"){
+  $('body').addClass("bdaybg");
+} else if (userChoice === "christmas"){
+  $('body').addClass("christmasbg");
+} else if (userChoice === "newYear"){
+  $('body').addClass("newYears"); //change me
+} 
 
 
 
