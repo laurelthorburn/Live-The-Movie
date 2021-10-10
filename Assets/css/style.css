@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color:rgba(127, 213, 216, 0.152)
+    background-color:rgba(192, 192, 192, 0.171);
 }
 
 body.christmasbg {
@@ -157,7 +157,40 @@ img {
     background-color: rgba(135, 21, 169, 0.659);
 }
 
-/* button:hover {
-    pointer-events: stroke;
-} */
+/* Cellphones */
+@media screen and (max-width: 600px) {
 
+    header {
+        text-align: center;
+    }
+    #introduction {
+        width: 100%;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+   img {
+       max-width: 200px;
+   }
+
+  }
+
+  /* Tablets */
+  @media screen and (max-width: 950px) {
+
+    header {
+        text-align: center;
+    }
+    #introduction {
+        width: 100%;
+    }
+  
+   img {
+       min-height: 200px;
+       max-height: 200px;
+   }
+
+  }

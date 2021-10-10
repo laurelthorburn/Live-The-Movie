@@ -1,4 +1,8 @@
-var movieTrailer = document.getElementById('movie-trailer');
+var movieTrailerOne = document.getElementById('movie-trailer-one');
+var movieTrailerTwo = document.getElementById('movie-trailer-two');
+var movieTrailerThree = document.getElementById('movie-trailer-three');
+var movieTrailerFour = document.getElementById('movie-trailer-four');
+
 var modal = document.querySelector('.modal');
 var modalBg = document.querySelector('.modal-background');
 
@@ -16,7 +20,8 @@ const language = "&language=en-US&";
 const apiUrl = baseUrl + '/discover/movie?sort_by=popularity.desc&'+ apiMovieKey;
 const posterUrl = 'https://image.tmdb.org/t/p/w500';
 
-  var userChoice = localStorage.getItem('savedHoliday');
+//pulls page one input from local storage
+var userChoice = localStorage.getItem('savedHoliday');
   
 //dictionary
 var objectFood = {
@@ -25,12 +30,11 @@ var objectFood = {
     christmas: "christmas", 
     halloween: "halloween",
     birthday: "cake", 
-    newYear: "champagne",
+    newYear: "cocktail",
     thanksgiving: "thanksgiving",
     independence: "american"
 }
 
-// an object to define the search query for movies
 var objectMovie = {
     valentines: "valentines", 
     patrick: "st-patrick",
@@ -45,12 +49,14 @@ var objectMovie = {
 
 //use this object to access your stuff
 
-var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=2" +  foodAPI;
+var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=3" +  foodAPI;
+
+// console.log(finalFoodUrl);
 
 //fetching spoonacular API
 window.onload = function (){
 
-    console.log(savedHoliday)
+    // console.log(savedHoliday)
 fetch(finalFoodUrl)
 .then(function (response) {
 return response.json();
@@ -60,8 +66,8 @@ return response.json();
     var linkOne = document.createElement('a');
     var pictureOne = document.createElement('img');
     var titleOne = document.createElement('h3');
-    console.log(data)
-    console.log(finalFoodUrl)
+    // console.log(data)
+    // console.log(finalFoodUrl)
     linkOne.setAttribute("href","https://spoonacular.com/recipes/" + data.results[0].title + "-" + data.results[0].id);
     linkOne.setAttribute('target', '_blank');
     pictureOne.setAttribute("src", data.results[0].image);
@@ -85,6 +91,19 @@ return response.json();
  linkTwo.append(pictureTwo);
  displayFood.append(linkTwo); 
 
+  //picture and title three
+  var linkThree = document.createElement('a');
+  var pictureThree = document.createElement('img');
+  var titleThree = document.createElement('h3');
+ 
+  linkThree.setAttribute("href","https://spoonacular.com/recipes/" + data.results[2].title + "-" + data.results[2].id);
+  linkThree.setAttribute('target', '_blank');
+  pictureThree.setAttribute("src", data.results[2].image);
+  titleThree.innerText = data.results[2].title;
+ 
+  linkThree.append(titleThree);
+  linkThree.append(pictureThree);
+  displayFood.append(linkThree); 
  
 showMovie();
 }
@@ -100,18 +119,17 @@ function showMovie(){
   
     var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
 
-    console.log ("query is " + objectMovie[savedHoliday]);
+    // console.log ("query is " + objectMovie[savedHoliday]);
 
-    console.log(finalUrl)
+    // console.log(finalUrl)
     fetch(finalUrl)
     .then(function (response) {
     return response.json();
     })
     .then(function (data) {
-        console.log(data)
+        // console.log(data)
         
       $(".card").each(function (i) {
-        // if poster is missing - select next movie
         if (data.results[i].poster_path == null){
           i = i + 2;
         }
@@ -125,17 +143,18 @@ function showMovie(){
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
         this.querySelector("#rating").textContent = "Rating: " + rating;
         
-        // fetching info for displaing trailers in the modal
-
         var trailer = "https://api.themoviedb.org/3/movie/"+ data.results[i].id + "/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
         fetch(trailer).then(res => res.json()).then(videoData => {
             if(videoData.results.length > 0){
+              
+              // var embed =  $('#testVideo');
+              // var embed = [];
                 videoData.results.forEach((video, idx) => {
                 let {name, key, site} = video
                 if(site == 'YouTube'){
                   $('#videoTag').attr("src", "https://www.youtube.com/embed/" + video.key);
-                  console.log(video.key)
-                  console.log(video.name)
+                  // console.log(video.key)
+                  // console.log(video.name)
                 }
               })
           }
@@ -145,9 +164,43 @@ function showMovie(){
     })}
 
 
+//changing background of page two depending on holiday selected
+console.log(userChoice);
+
+if (userChoice === "valentines"){
+  $('body').addClass("valentinebg");
+} else if (userChoice === "patrick"){
+  $('body').addClass("irishbg"); //change me
+} else if (userChoice === "independence"){
+  $('body').addClass("independencebg");
+} else if (userChoice === "halloween"){
+  $('body').addClass("halloweenbg");
+} else if (userChoice === "thanksgiving"){
+  $('body').addClass("thanksgivingbg");
+} else if (userChoice === "birthday"){
+  $('body').addClass("bdaybg");
+} else if (userChoice === "christmas"){
+  $('body').addClass("christmasbg");
+} else if (userChoice === "newYear"){
+  $('body').addClass("newYears"); //change me
+} 
+
+
 
 // toggling modal
-movieTrailer.addEventListener('click', () => {
+movieTrailerOne.addEventListener('click', () => {
+    modal.classList.add('is-active');
+    
+});
+movieTrailerTwo.addEventListener('click', () => {
+    modal.classList.add('is-active');
+    
+});
+movieTrailerThree.addEventListener('click', () => {
+    modal.classList.add('is-active');
+    
+});
+movieTrailerFour.addEventListener('click', () => {
     modal.classList.add('is-active');
     
 });

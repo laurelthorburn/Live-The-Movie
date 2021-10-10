@@ -11,11 +11,19 @@
 
   .side {
     grid-area: sidebar;
-    /* background-color: crimson; */
+    /* background-color: rgba(255, 255, 255, 0.61); */
     display: flex;
     flex-direction: column;
     text-align: center;
+    max-height: 625px;
+    background-color: rgba(255, 255, 255, .15);
   }
+
+  /* Creating frosted glass effect */
+  .side {
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+   }
 
   #recipe-header{
     margin-bottom: 2px;
@@ -23,12 +31,12 @@
     font-size: 50px;
   }
 
-  .main-footer {
-    grid-area: footer;
-    /* background-color: darkmagenta; */
-    height: 50px;
-    display: flex;
-    justify-content: center;
+  .side img {
+    height: 125px;
+  }
+
+  #posterIMGcard {
+    max-height: 350px;
   }
 
   h1 {
@@ -58,7 +66,7 @@ h3 {
       "footer";
   }
 
-  img:hover {
+  aside img:hover {
     opacity: 80%;
   }
 
@@ -109,19 +117,108 @@ h3 {
   background-color: rgba(10, 10, 10, 0.308);
 }
 
-/* .modal-background{
-  background-color: rgba(10,10,10,.86);
-} */
+#description {
+  height: 100px;
+  overflow-y: scroll;
+}
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-  @media (min-width: 700px) {
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+ background: #555;
+}
+
+.main-footer {
+  grid-area: footer;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* backgrounds controlled by button click (dynamically added in scriptpage2.js */
+
+.christmasbg {
+  background-image: url('../Media/snowfallingbg.gif');
+}
+.independencebg {
+  background-image: url('../Media/flag.png');
+  background-size: cover;
+}
+
+.valentinebg {
+  background-image: url('../Media/heartbg.gif');
+}
+
+.newYears {
+  background-image: url('../Media/glitterbg.jpg');
+  background-repeat: no-repeat;
+}
+
+.bdaybg {
+  background-image: url('../Media/confettibg.gif');
+}
+.irishbg {
+  background-color: rgba(150, 236, 22, 0.438)
+}
+
+.halloweenbg {
+  background-image: url('../Media/spookybg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.thanksgivingbg {
+  background-image: url('../Media/thanksgivingbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  @media (min-width: 1401px) {
     .wrapper {
       grid-template-columns: 1fr 4fr 1fr;
       grid-template-areas:
         "header header  header"
         "content content     sidebar"
         "content content     sidebar"
-        "footer footer  footer"
+        "footer footer       footer"
      }
 
+  }
+
+
+  @media screen and (max-width: 749px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "content"
+        "content"
+        "content"
+        "sidebar"
+        "footer"
+     }
+    h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    } 
+
+iframe {
+  width: 250px;
+  height: auto;
+}
   }
