@@ -51,7 +51,7 @@ var objectMovie = {
 
 var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=3" +  foodAPI;
 
-console.log(finalFoodUrl);
+// console.log(finalFoodUrl);
 
 //fetching spoonacular API
 window.onload = function (){
