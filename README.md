@@ -17,14 +17,14 @@ SO THAT I can have a holiday themed night planned on my behalf
 ```
 GIVEN eight major holidays
 WHEN I select a holiday of my choosing
-THEN I am presented with movies options and recipes related to that holiday
+THEN I am presented with movie options and recipes related to that holiday
 WHEN I view a preferred recipe
 THEN I am taken to that recipe's website on a new tab
 WHEN I select the movie I want
 THEN I am able to view the movie's trailer
 WHEN I click the go back button
-THEN I am return to the holiday selector page and I am able to select a different holiday
-WHEN I hover offer the selected holiday
+THEN I am returned to the holiday selector page and I am able to select a different holiday
+WHEN I hover over the selected holiday
 THEN I am presented with a holiday themed background
 ```
 
