@@ -31,7 +31,7 @@ THEN I am presented with a holiday themed background
 
 # Website Screenshot
 
-![INSERT IMG SHORT DESCRIPTION]( gif link here (convert mov4/webm to gif: https://cloudconvert.com/webm-to-gif) )
+![GIF demonstrating usability of 'Live the Movie' site](./Assets/Media/livethemovie.gif)
 
 # Links
 
