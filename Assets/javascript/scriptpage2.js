@@ -151,7 +151,6 @@ movieTrailer.addEventListener('click', () => {
     
 });
 
-modalBg.addEventListener('click', () => {
-    modal.classList.remove('is-active')
-    
-})
+
+$('.dropdown-trigger').dropdown();
+      
