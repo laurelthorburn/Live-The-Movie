@@ -6,7 +6,7 @@ var movieTrailerFour = document.getElementById('movie-trailer-four');
 var modal = document.querySelector('.modal');
 var modalBg = document.querySelector('.modal-background');
 
-var foodAPI = "&apiKey=d0f4f19f4b444b67846287c205775f1c";
+var foodAPI = "&apiKey=cb71e1ba5c6144aeb5a8cfb7f90056fb";
 var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 var savedHoliday = localStorage.getItem("savedHoliday");
 var displayFood = document.getElementById('food-container');
