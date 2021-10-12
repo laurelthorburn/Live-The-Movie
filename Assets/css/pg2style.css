@@ -186,6 +186,7 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
+/* Dynamically changing holiday header via scriptpage2.js */
 .valentineHeader {
   background-color: pink;
   font-family: 'Fleur De Leah', cursive;
