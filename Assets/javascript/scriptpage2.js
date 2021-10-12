@@ -118,6 +118,7 @@ $('#go-back').click(function(){
 // movie function display
 
 var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
+var noTrailer = document.createElement("p");
 
 function showMovie(){
     fetch(finalUrl)
@@ -145,6 +146,7 @@ function showMovie(){
     })}
 
     // fetching info for displaing trailers in the modal
+    
 
     function showTrailer(i){
       fetch(finalUrl)
@@ -166,10 +168,9 @@ function showMovie(){
           })
       }
       else {
-        var alert = document.createElement("p");
-        $(".modal-content").append(alert)
+        $(".modal-content").append(noTrailer)
         var message = "No video found!";
-        alert.append(message)
+        noTrailer.append(message)
         
       }
    })
@@ -223,5 +224,5 @@ movieTrailerFour.addEventListener('click', () => {
 
 modalBg.addEventListener('click', () => {
     modal.classList.remove('is-active')
-    
+    noTrailer.innerHTML = "";
 })
