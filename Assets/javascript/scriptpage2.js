@@ -168,6 +168,7 @@ function showMovie(){
           })
       }
       else {
+        $('#videoTag').attr("src", "" );
         $(".modal-content").append(noTrailer)
         var message = "No video found!";
         noTrailer.append(message)
