@@ -1,224 +1,232 @@
 .main-head {
-    grid-area: header;
-    /* background-color: chartreuse; */
-    height: 75px;
+  grid-area: header;
+  /* background-color: chartreuse; */
+  height: 75px;
 
-  }
-  .content {
-    grid-area: content;
-    /* background-color: chocolate; */
-  }
+}
+.content {
+  grid-area: content;
+  /* background-color: chocolate; */
+}
 
-  .side {
-    grid-area: sidebar;
-    /* background-color: rgba(255, 255, 255, 0.61); */
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-height: 625px;
-    background-color: rgba(255, 255, 255, .15);
-  }
+.side {
+  grid-area: sidebar;
+  /* background-color: rgba(255, 255, 255, 0.61); */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-height: 625px;
+  background-color: rgba(255, 255, 255, .15);
+}
 
-  /* Creating frosted glass effect */
-  .side {
-    background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(5px);
-   }
+/* Creating frosted glass effect */
+.side {
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+ }
 
-  #recipe-header{
-    margin-bottom: 2px;
-    font-family: 'Annie Use Your Telescope', cursive;
-    font-size: 50px;
-  }
+#recipe-header{
+  margin-bottom: 2px;
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 50px;
+}
 
-  .side img {
-    height: 125px;
-  }
+.side img {
+  height: 125px;
+}
 
-  #posterIMGcard {
-    max-height: 350px;
-  }
+#posterIMGcard {
+  max-height: 350px;
+}
 
-  h1 {
-    font-family: 'Kristi', cursive;
-    font-size: 65px;
-    margin: none;
-    background: -webkit-linear-gradient(rgb(155, 155, 155), rgb(25, 25, 25));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
+h1 {
+  font-family: 'Kristi', cursive;
+  font-size: 65px;
+  margin: none;
+  background: -webkit-linear-gradient(rgb(155, 155, 155), rgb(25, 25, 25));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 h3 {
-  font-family: 'Arima Madurai', cursive;
-  margin: 15px 0;
-  text-decoration: underline;
+font-family: 'Arima Madurai', cursive;
+margin: 15px 0;
+text-decoration: underline;
 }
-  
-  .wrapper {
-    display: grid;
-    gap: 2px;
-    grid-template-areas:
-      "header"
-      "nav"
-      "content"
-      "sidebar"
-      "footer";
-  }
 
-  aside img:hover {
-    opacity: 80%;
-  }
+.wrapper {
+  display: grid;
+  gap: 2px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "footer";
+}
+
+aside img:hover {
+  opacity: 80%;
+}
 
 /* Go back button */
 .button-55 {
-  align-self: center;
-  background-color: #fff;
-  background-image: none;
-  background-position: 0 90%;
-  background-repeat: repeat no-repeat;
-  background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-  box-sizing: border-box;
-  color: #41403e;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Neucha, sans-serif;
-  font-size: 1rem;
-  line-height: 23px;
-  outline: none;
-  padding: .75rem;
-  text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+align-self: center;
+background-color: #fff;
+background-image: none;
+background-position: 0 90%;
+background-repeat: repeat no-repeat;
+background-size: 4px 3px;
+border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+border-style: solid;
+border-width: 2px;
+box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+box-sizing: border-box;
+color: #41403e;
+cursor: pointer;
+display: inline-block;
+font-family: Neucha, sans-serif;
+font-size: 1rem;
+line-height: 23px;
+outline: none;
+padding: .75rem;
+text-decoration: none;
+transition: all 235ms ease-in-out;
+border-bottom-left-radius: 15px 255px;
+border-bottom-right-radius: 225px 15px;
+border-top-left-radius: 255px 15px;
+border-top-right-radius: 15px 225px;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
 }
 
 .button-55:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
+box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+transform: translate3d(0, 2px, 0);
 }
 
 .button-55:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
 .modal {
-  max-height: 100%;
-  width: 100%;
-  background-color: rgba(10, 10, 10, 0.308);
+max-height: 100%;
+width: 100%;
+background-color: rgba(10, 10, 10, 0.308);
 }
 
 #description {
-  height: 100px;
-  overflow-y: scroll;
+height: 100px;
+overflow-y: scroll;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
- background: #555;
+background: #555;
 }
 
 .main-footer {
-  grid-area: footer;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+grid-area: footer;
+height: 50px;
+display: flex;
+justify-content: center;
+width: 100%;
 }
 
 /* backgrounds controlled by button click (dynamically added in scriptpage2.js */
 
 .christmasbg {
-  background-image: url('../Media/snowfallingbg.gif');
+background-image: url('../Media/snowfallingbg.gif');
 }
 .independencebg {
-  background-image: url('../Media/flag.png');
-  background-size: cover;
+background-image: url('../Media/flag.png');
+background-size: cover;
 }
 
 .valentinebg {
-  background-image: url('../Media/heartbg.gif');
+background-image: url('../Media/heartbg.gif');
 }
 
 .newYears {
-  background-image: url('../Media/glitterbg.jpg');
-  background-repeat: no-repeat;
+background-image: url('../Media/glitterbg.jpg');
+background-repeat: no-repeat;
 }
 
 .bdaybg {
-  background-image: url('../Media/confettibg.gif');
+background-image: url('../Media/confettibg.gif');
 }
 .irishbg {
-  background-color: rgba(150, 236, 22, 0.438)
+background-color: rgba(150, 236, 22, 0.438)
 }
 
 .halloweenbg {
-  background-image: url('../Media/spookybg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+background-image: url('../Media/spookybg.jpg');
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .thanksgivingbg {
-  background-image: url('../Media/thanksgivingbg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+background-image: url('../Media/thanksgivingbg.jpg');
+background-repeat: no-repeat;
+background-size: cover;
 }
 
-  @media (min-width: 1401px) {
-    .wrapper {
-      grid-template-columns: 1fr 4fr 1fr;
-      grid-template-areas:
-        "header header  header"
-        "content content     sidebar"
-        "content content     sidebar"
-        "footer footer       footer"
-     }
-
-  }
+.modal-content p {
+  border: solid black 2px;
+  text-align: center;
+  background-color: #888;
+  color: white;
+}
 
 
-  @media screen and (max-width: 749px) {
-    .wrapper {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "header"
-        "content"
-        "content"
-        "content"
-        "sidebar"
-        "footer"
-     }
-    h1 {
-      font-size: 45px;
-      margin-bottom: 15px;
-    } 
+@media (min-width: 1401px) {
+  .wrapper {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header  header"
+      "content content     sidebar"
+      "content content     sidebar"
+      "footer footer       footer"
+   }
+
+}
+
+
+@media screen and (max-width: 749px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "content"
+      "content"
+      "sidebar"
+      "footer"
+   }
+  h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+  } 
 
 iframe {
-  width: 250px;
-  height: auto;
+width: 250px;
+height: auto;
 }
-  }
+}
