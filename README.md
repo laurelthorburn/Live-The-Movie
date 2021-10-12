@@ -33,8 +33,8 @@ THEN I am presented with a holiday themed background
 ```
 # Technologies Used
 We utilized two server side APIs for this project:
-* Spoonacular
-* The Movie Database (TMDB)
+* [Spoonacular]: https://spoonacular.com/food-api/docs
+* [The Movie Database (TMDB)]: https://developers.themoviedb.org/3/getting-started/introduction
 
 # Website Screenshot
 
