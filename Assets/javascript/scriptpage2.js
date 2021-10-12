@@ -154,6 +154,7 @@ function showMovie(){
         if(rating == 0){
           this.querySelector("#rating").textContent = "Rating is not available"
         }
+
     }
     ) 
     })}
