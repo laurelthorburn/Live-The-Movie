@@ -6,7 +6,8 @@ var movieTrailerFour = document.getElementById('movie-trailer-four');
 var modal = document.querySelector('.modal');
 var modalBg = document.querySelector('.modal-background');
 
-var foodAPI = "&apiKey=44dd0e196e82490587267695e2fe196c";
+var foodAPI = "&apiKey=cb71e1ba5c6144aeb5a8cfb7f90056fb";
+
 var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 var savedHoliday = localStorage.getItem("savedHoliday");
 var displayFood = document.getElementById('food-container');
@@ -147,6 +148,9 @@ function showMovie(){
         this.querySelector("#title").textContent = title;
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
         this.querySelector("#rating").textContent = "Rating: " + rating ;
+        if(rating == 0){
+          this.querySelector("#rating").textContent = "Rating is not available"
+        }
 
     }
     ) 
@@ -175,6 +179,8 @@ function showMovie(){
       }
 
       else {
+
+        $('#videoTag').attr("src", "" );
         $(".modal-content").append(noTrailer)
         var message = "No video found!";
         noTrailer.append(message)
