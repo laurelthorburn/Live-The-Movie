@@ -20,6 +20,8 @@ SO THAT I can have a holiday themed night planned on my behalf
 GIVEN eight major holidays
 WHEN I select a holiday of my choosing
 THEN I am presented with movie options and recipes related to that holiday
+WHEN I select a dietary restriction
+THAN I am presented with recipes that meet my dietary needs
 WHEN I view a preferred recipe
 THEN I am taken to that recipe's website on a new tab
 WHEN I select the movie I want
