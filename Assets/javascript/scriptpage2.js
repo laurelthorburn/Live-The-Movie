@@ -197,20 +197,28 @@ console.log(userChoice);
 
 if (userChoice === "valentines"){
   $('body').addClass("valentinebg");
+  $('header').addClass("valentineHeader");
 } else if (userChoice === "patrick"){
   $('body').addClass("irishbg"); 
+  $('header').addClass("irishHeader");
 } else if (userChoice === "independence"){
   $('body').addClass("independencebg");
+  $('header').addClass("independenceHeader");
 } else if (userChoice === "halloween"){
   $('body').addClass("halloweenbg");
+  $('header').addClass("halloweenHeader");
 } else if (userChoice === "thanksgiving"){
   $('body').addClass("thanksgivingbg");
+  $('header').addClass("tgivingHeader");
 } else if (userChoice === "birthday"){
   $('body').addClass("bdaybg");
+  $('header').addClass("bdayHeader");
 } else if (userChoice === "christmas"){
   $('body').addClass("christmasbg");
+  $('header').addClass("xmasHeader");
 } else if (userChoice === "newYear"){
   $('body').addClass("newYears"); 
+  $('header').addClass("newYearHeader");
 } 
 
 

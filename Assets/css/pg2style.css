@@ -40,8 +40,8 @@
 }
 
 h1 {
-  font-family: 'Kristi', cursive;
-  font-size: 65px;
+  /* font-family: 'Kristi', cursive; */
+  /* font-size: 65px; */
   margin: none;
   background: -webkit-linear-gradient(rgb(155, 155, 155), rgb(25, 25, 25));
   -webkit-background-clip: text;
@@ -188,6 +188,68 @@ background-size: cover;
 background-image: url('../Media/thanksgivingbg.jpg');
 background-repeat: no-repeat;
 background-size: cover;
+}
+
+.valentineHeader {
+  background-color: pink;
+  font-family: 'Fleur De Leah', cursive;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 2px;
+  border-top: solid rgba(0, 0, 0, 0.548) 2px;
+  padding-top: 8px;
+    font-size: 65px;
+
+}
+.irishHeader {
+  font-family: 'Gideon Roman', cursive;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 2px;
+  border-top: solid rgba(0, 0, 0, 0.548) 2px;
+  padding-top: 8px;
+  background-color: rgb(108, 199, 90);
+  font-size: 65px;
+
+}
+.independenceHeader {
+  font-family: 'Anton', sans-serif;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 2px;
+  border-top: solid rgba(0, 0, 0, 0.548) 2px;
+  padding-top: 8px;
+  background-color: rgba(84, 84, 243, 0.212);
+  font-size: 50px;
+}
+.halloweenHeader {
+  font-family: 'Metal Mania', cursive;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 2px;
+  border-top: solid rgba(0, 0, 0, 0.548) 2px;
+  padding-top: 8px;
+  font-size: 55px;
+}
+.tgivingHeader {
+  font-family: 'Pacifico', cursive;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 2px;
+  border-top: solid rgba(0, 0, 0, 0.548) 2px;
+  padding-top: 8px;
+  font-size: 55px;
+}
+.bdayHeader {
+  font-family: 'Festive', cursive;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 2px;
+  border-top: solid rgba(0, 0, 0, 0.548) 2px;
+  padding-top: 8px;
+  font-size: 55px;
+}
+.xmasHeader {
+  font-family: 'Mountains of Christmas', cursive;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 2px;
+  border-top: solid rgba(0, 0, 0, 0.548) 2px;
+  padding-top: 8px;
+  font-size: 55px;
+}
+.newYearHeader {
+  font-family: 'Limelight', cursive;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 2px;
+  border-top: solid rgba(0, 0, 0, 0.548) 2px;
+  padding-top: 8px;
+  font-size: 55px;
 }
 
 .modal-content p {
