@@ -139,7 +139,7 @@ function showMovie(){
         this.querySelector("#description").textContent = description;
         this.querySelector("#title").textContent = title;
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
-        this.querySelector("#rating").textContent = "Rating: " + rating + "i= " + i ;
+        this.querySelector("#rating").textContent = "Rating: " + rating ;
       
     }
     ) 
