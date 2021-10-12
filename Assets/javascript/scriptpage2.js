@@ -6,7 +6,7 @@ var movieTrailerFour = document.getElementById('movie-trailer-four');
 var modal = document.querySelector('.modal');
 var modalBg = document.querySelector('.modal-background');
 
-var foodAPI = "&apiKey=d0f4f19f4b444b67846287c205775f1c";
+var foodAPI = "&apiKey=44dd0e196e82490587267695e2fe196c";
 var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 var savedHoliday = localStorage.getItem("savedHoliday");
 var displayFood = document.getElementById('food-container');
@@ -22,6 +22,11 @@ const posterUrl = 'https://image.tmdb.org/t/p/w500';
 
 
 var userChoice = localStorage.getItem('savedHoliday');
+var userDiet = localStorage.getItem('savedDiet');
+
+var diet = "&diet=" + userDiet;
+
+console.log(diet);
   
 //dictionary
 var objectFood = {
@@ -50,9 +55,9 @@ var objectMovie = {
 
 //use this object to access your stuff
 
-var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=3" +  foodAPI;
+var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=3" +  foodAPI + diet;
 
-// console.log(finalFoodUrl);
+console.log(finalFoodUrl);
 
 //fetching spoonacular API
 window.onload = function (){
