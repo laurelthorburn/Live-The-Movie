@@ -142,6 +142,9 @@ function showMovie(){
         this.querySelector("#title").textContent = title;
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
         this.querySelector("#rating").textContent = "Rating: " + rating ;
+        if(rating == 0){
+          this.querySelector("#rating").textContent = "Rating is not available"
+        }
 
     }
     ) 
