@@ -4,6 +4,8 @@ var userDiet;
 
 var selectDiet = document.getElementById("diet-choice");
 
+//creating holiday button that changes index page and stores both user holiday and diet to local storage (see functions at bottom of this page)
+
 $('#valentines').on('click', function(){
     userHoliday = $('#valentines').attr('id');
     var userDiet = selectDiet.options[selectDiet.selectedIndex].value;
@@ -76,16 +78,18 @@ $('#newYear').on('click', function(){
 
 });
 
+//saving user selected holiday to local storage
 function saveUserChoice(holiday){
     localStorage.setItem("savedHoliday", holiday);
 };
 
+//storing user dietary restrictions to local storage
 function saveUserDiet(diet){
     userDiet = selectDiet.value;
     localStorage.setItem("savedDiet", diet);
 };
 
-
+//creating go back button
 function changePage2(){
     window.location = "indexresults.html";
   };
