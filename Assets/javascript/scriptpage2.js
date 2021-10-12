@@ -165,6 +165,13 @@ function showMovie(){
             }
           })
       }
+      else {
+        var alert = document.createElement("p");
+        $(".modal-content").append(alert)
+        var message = "No video found!";
+        alert.append(message)
+        
+      }
    })
     })
     }
