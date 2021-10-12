@@ -171,7 +171,7 @@ function showMovie(){
         $(".modal-content").append(noTrailer)
         var message = "No video found!";
         noTrailer.append(message)
-        
+        noTrailer.color = 'yellow';
       }
    })
     })
