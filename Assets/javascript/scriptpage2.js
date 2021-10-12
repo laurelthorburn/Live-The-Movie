@@ -118,7 +118,9 @@ $('#go-back').click(function(){
 // movie function display
 
 var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
+
 var noTrailer = document.createElement("p");
+
 
 function showMovie(){
     fetch(finalUrl)
@@ -140,13 +142,12 @@ function showMovie(){
         this.querySelector("#title").textContent = title;
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
         this.querySelector("#rating").textContent = "Rating: " + rating ;
-      
+
     }
     ) 
     })}
 
     // fetching info for displaing trailers in the modal
-    
 
     function showTrailer(i){
       fetch(finalUrl)
@@ -167,6 +168,7 @@ function showMovie(){
             }
           })
       }
+
       else {
         $('#videoTag').attr("src", "" );
         $(".modal-content").append(noTrailer)
@@ -174,6 +176,7 @@ function showMovie(){
         noTrailer.append(message)
         noTrailer.color = 'yellow';
       }
+
    })
     })
     }
