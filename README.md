@@ -29,7 +29,10 @@ THEN I am returned to the holiday selector page and I am able to select a differ
 WHEN I hover over the selected holiday
 THEN I am presented with a holiday themed background
 ```
-
+# Technologies Used
+We utilized two server side APIs for this project:
+* Spoonacular
+* TMDB
 
 # Website Screenshot
 
