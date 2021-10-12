@@ -173,7 +173,9 @@ background-repeat: no-repeat;
 background-image: url('../Media/confettibg.gif');
 }
 .irishbg {
-background-color: rgba(150, 236, 22, 0.438)
+  background-image: url('../Media/clover.png');
+  background-repeat: repeat-x;
+  background-position-y: bottom;
 }
 
 .halloweenbg {

@@ -121,33 +121,36 @@ $('#go-back').click(function(){
         window.location = "index.html";
 });
 
-// movie function display
 
+// final URL for TMDB fetch
 var finalUrl =   searchUrl + apiMovieKey + language + "&query=" + objectMovie[savedHoliday]  + "&page=1&include_adult=false"
-
+// creating an element for displaying a no-trailer case message 
 var noTrailer = document.createElement("p");
 
-
+// main movie fetch function 
 function showMovie(){
     fetch(finalUrl)
     .then(function (response) {
     return response.json();
     })
+    // displaying fetched data in cards
     .then(function (data) {
       $(".card").each(function (i) {
         // if poster is missing - select next movie
         if (data.results[i].poster_path == null){
           i = i + 2;
         }
+        // adding variables for every fetched line
         var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
         var description = data.results[i].overview;
         var title = data.results[i].original_title
         var rating = data.results[i].vote_average
-        //  works for description fetch and display
+        //  displaying content of previous variable on the page
         this.querySelector("#description").textContent = description;
         this.querySelector("#title").textContent = title;
         this.querySelector("#posterIMGcard").setAttribute("src", imgLink);
         this.querySelector("#rating").textContent = "Rating: " + rating ;
+        // if rating is not availabe\0 text:
         if(rating == 0){
           this.querySelector("#rating").textContent = "Rating is not available"
         }
@@ -157,19 +160,18 @@ function showMovie(){
     })}
 
     // fetching info for displaying trailers in the modal
-
     function showTrailer(i){
       fetch(finalUrl)
     .then(function (response) {
     return response.json();
     })
     .then(function (data) {
-      // if no trailer - add a picture that says "no trailer found"
       var trailer = "https://api.themoviedb.org/3/movie/"+ data.results[i].id + "/videos?api_key=d58ec33864c2c1ca7cfddcf6e0b283c8&language=en-US"
       fetch(trailer).then(res => res.json()).then(videoData => {
         if(videoData.results.length > 0){
             videoData.results.forEach((video, idx) => {
             let {name, key, site} = video
+            // grabbing video from youtube 
             if(site == 'YouTube'){
               $('#videoTag').attr("src", "https://www.youtube.com/embed/" + video.key);
               // console.log(video.key)
@@ -177,14 +179,13 @@ function showMovie(){
             }
           })
       }
-
+      // No-trailer case - show the text line
       else {
-
         $('#videoTag').attr("src", "" );
         $(".modal-content").append(noTrailer)
         var message = "No video found!";
         noTrailer.append(message)
-        noTrailer.color = 'yellow';
+        
       }
 
    })
@@ -213,30 +214,34 @@ if (userChoice === "valentines"){
 } 
 
 
-
 // toggling modal
 movieTrailerOne.addEventListener('click', () => {
     modal.classList.add('is-active');
     let i = 0;
+    // fetching trailer data and displaying it in modal
     showTrailer(i);
 });
 movieTrailerTwo.addEventListener('click', () => {
     modal.classList.add('is-active');
     let i = 1;
+    // fetching trailer data and displaying it in modal
     showTrailer(i); 
 });
 movieTrailerThree.addEventListener('click', () => {
     modal.classList.add('is-active');
     let i = 2;
+    // fetching trailer data and displaying it in modal
     showTrailer(i); 
 });
 movieTrailerFour.addEventListener('click', () => {
     modal.classList.add('is-active');
     let i = 3;
+    // fetching trailer data and displaying it in modal
     showTrailer(i); 
 });
 
 modalBg.addEventListener('click', () => {
     modal.classList.remove('is-active')
+    // getting rid of ""No video found!" msg when modal is closed
     noTrailer.innerHTML = "";
 })
