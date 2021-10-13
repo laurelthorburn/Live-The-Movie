@@ -141,11 +141,13 @@ function showMovie(){
     .then(function (data) {
       $(".card").each(function (i) {
         // if poster is missing - select next movie
-        if (data.results[i].poster_path == null){
-          i = i + 2;
-        }
+        console.log(data)
         // adding variables for every fetched line
         var imgLink = "https://image.tmdb.org/t/p/w500" + data.results[i].poster_path;
+        if (data.results[i].poster_path == null){
+          // add image if no poster is available
+          var imgLink = './Assets/Media/poster.png' ;
+        }
         var description = data.results[i].overview;
         var title = data.results[i].original_title
         var rating = data.results[i].vote_average
