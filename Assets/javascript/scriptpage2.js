@@ -1,3 +1,5 @@
+
+//modal variables
 var movieTrailerOne = document.getElementById('movie-trailer-one');
 var movieTrailerTwo = document.getElementById('movie-trailer-two');
 var movieTrailerThree = document.getElementById('movie-trailer-three');
@@ -6,6 +8,7 @@ var movieTrailerFour = document.getElementById('movie-trailer-four');
 var modal = document.querySelector('.modal');
 var modalBg = document.querySelector('.modal-background');
 
+//food variables
 var foodAPI = "&apiKey=44dd0e196e82490587267695e2fe196c";
 
 var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
@@ -13,7 +16,7 @@ var savedHoliday = localStorage.getItem("savedHoliday");
 var displayFood = document.getElementById('food-container');
 
 
-// movie script part
+// movie variables
 const apiMovieKey = 'api_key=d58ec33864c2c1ca7cfddcf6e0b283c8';
 const baseUrl = 'https://api.themoviedb.org/3';
 const searchUrl = "https://api.themoviedb.org/3/search/movie?"
@@ -21,7 +24,7 @@ const language = "&language=en-US&";
 const apiUrl = baseUrl + '/discover/movie?sort_by=popularity.desc&'+ apiMovieKey;
 const posterUrl = 'https://image.tmdb.org/t/p/w500';
 
-
+//pull from local storage
 var userChoice = localStorage.getItem('savedHoliday');
 var userDiet = localStorage.getItem('savedDiet');
 
@@ -29,7 +32,7 @@ var diet = "&diet=" + userDiet;
 
 console.log(diet);
   
-//dictionary
+//dictionary for food 
 var objectFood = {
     valentines: "heart", 
     patrick: "irish",
@@ -54,7 +57,7 @@ var objectMovie = {
 }
 
 
-//use this object to access your stuff
+//combining food url with user parameters
 
 var finalFoodUrl = foodBaseURL + objectFood[savedHoliday] + "&number=3" +  foodAPI + diet;
 
@@ -117,6 +120,7 @@ showMovie();
 ) 
 }
 
+//go back button - lets user return to page one index
 $('#go-back').click(function(){
         window.location = "index.html";
 });
