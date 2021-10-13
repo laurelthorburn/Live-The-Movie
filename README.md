@@ -2,7 +2,7 @@
 See the movie, live the movie. Not only will we help you determine which movie to watch, we'll help you create a unique holiday-themed night to remember.
 
 ## Description
-We created this project in order to provide our users with a holiday filled evening.  Using javascript, css, and HTML, we created a holiday theme page from scratch that uses two third party APIs, Spoonacular and TMDB, to fetch holiday themed recipes and movies.
+We created this project in order to provide our users with a holiday filled evening.  Using javascript, css, and HTML, we created a holiday themed page from scratch that uses two third party APIs, Spoonacular and TMDB, to fetch holiday themed recipes and movies.
 
 Throughout this project, we continued to improve our javascript skills and further learned how to collaborate using github, a skill that had not yet been acquired for assignments as we had all gotten used to working alone until now.  Learning how to manage project tasks, fix merge issues, and build on collaboration was invaluable as we believe it has helped strength us as future team oriented coders.  We also enjoyed learning from one another and seeing how different one person's approach to a problem is than another's. 
 
@@ -20,6 +20,8 @@ SO THAT I can have a holiday themed night planned on my behalf
 GIVEN eight major holidays
 WHEN I select a holiday of my choosing
 THEN I am presented with movie options and recipes related to that holiday
+WHEN I select a dietary restriction
+THAN I am presented with recipes that meet my dietary needs
 WHEN I view a preferred recipe
 THEN I am taken to that recipe's website on a new tab
 WHEN I select the movie I want
@@ -31,8 +33,8 @@ THEN I am presented with a holiday themed background
 ```
 # Technologies Used
 We utilized two server side APIs for this project:
-* Spoonacular
-* The Movie Database (TMDB)
+* [Spoonacular](https://spoonacular.com/food-api/docs)
+* [The Movie Database (TMDB)](https://developers.themoviedb.org/3/getting-started/introduction)
 
 # Website Screenshot
 
