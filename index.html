@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./Assets/css/reset.css" />
     <!-- put third party links here -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300&display=swap" rel="stylesheet">
     <!-- our stylesheet -->
@@ -18,7 +19,16 @@
 <header>
     <h1>Watch the movie, live the movie</h1>
     <p id="introduction">Holidays are stressful enough as is, especially when it comes to entertaining.  Thankfully, now all you have to do is pick your holiday, and we provide you with the movie and the.  All you have to do is show up and have a good time. Cheers 🥂</p>
-</header>
+    <div class="select">
+      <select id ="diet-choice">
+        <option value="none">Optional: Any special dietary restrictions?</option>
+        <option value="glutenfree">Gluten Free</option>
+        <option value ="paleo">Paleo</option>
+        <option value="vegetarian">Vegetarian</option>
+      </select>
+      <input type="text" id="value">
+    </div>
+  </header>
 
 <div class="container">
     <div class="row">

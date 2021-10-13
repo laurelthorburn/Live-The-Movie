@@ -6,8 +6,8 @@ var foodAPI = "&apiKey=d0f4f19f4b444b67846287c205775f1c";
 var foodBaseURL = "https://api.spoonacular.com/recipes/complexSearch?query=";
 var savedHoliday = localStorage.getItem("savedHoliday");
 var displayFood = document.getElementById('food-container');
-
-
+var foodList = document.querySelectorAll("li").value;
+var submitFood = document.getElementById("submit-food");
 // movie script part
 const apiMovieKey = 'api_key=d58ec33864c2c1ca7cfddcf6e0b283c8';
 const baseUrl = 'https://api.themoviedb.org/3';
@@ -18,6 +18,7 @@ const posterUrl = 'https://image.tmdb.org/t/p/w500';
 
   var userChoice = localStorage.getItem('savedHoliday');
   
+  console.log(foodList);
 //dictionary
 var objectFood = {
     valentines: "heart", 
@@ -70,6 +71,7 @@ return response.json();
     linkOne.append(pictureOne);
     displayFood.append(linkOne); 
 
+  
  //picture and title two
  var linkTwo = document.createElement('a');
  var pictureTwo = document.createElement('img');
@@ -84,7 +86,6 @@ return response.json();
  linkTwo.append(pictureTwo);
  displayFood.append(linkTwo); 
 
- 
 showMovie();
 }
 ) 
@@ -143,7 +144,10 @@ function showMovie(){
     ) 
     })}
 
-
+function saveUserDiet(diet){
+localStorage.setItem("saveDiet", userDiet);
+location.reload();
+}
 
 // toggling modal
 movieTrailer.addEventListener('click', () => {
@@ -153,4 +157,5 @@ movieTrailer.addEventListener('click', () => {
 
 
 $('.dropdown-trigger').dropdown();
-      
+ 
+submitFood.addEventListener("click", saveUserDiet);
