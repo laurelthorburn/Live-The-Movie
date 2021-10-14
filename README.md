@@ -35,6 +35,8 @@ THEN I am presented with a holiday themed background
 We utilized two server side APIs for this project:
 * [Spoonacular](https://spoonacular.com/food-api/docs)
 * [The Movie Database (TMDB)](https://developers.themoviedb.org/3/getting-started/introduction)
+* [Materialize] (https://materializecss.com/cards.html)
+* [Bulma] (https://bulma.io/documentation/components/modal/)
 
 # Website Screenshot
 
@@ -45,6 +47,8 @@ We utilized two server side APIs for this project:
 Github: https://github.com/laurelthorburn/Live-The-Movie
 
 Deployed Site: https://laurelthorburn.github.io/Live-The-Movie/
+
+Presentation: https://docs.google.com/presentation/d/1nFc2xP4fpfl6g6QyWAt7WTw1nwYVgMP8jpGsxEd8Hf0/edit?usp=sharing
 
 
 # Resources/Credit
