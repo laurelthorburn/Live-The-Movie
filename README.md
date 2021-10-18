@@ -35,8 +35,16 @@ THEN I am presented with a holiday themed background
 We utilized two server side APIs for this project:
 * [Spoonacular](https://spoonacular.com/food-api/docs)
 * [The Movie Database (TMDB)](https://developers.themoviedb.org/3/getting-started/introduction)
+
+CSS Libraries:
 * [Materialize](https://materializecss.com/cards.html)
 * [Bulma](https://bulma.io/documentation/components/modal/)
+* [jQuery](https://jquery.com/)
+
+Languages:
+* JavaScript
+* CSS
+* HTML
 
 # Website Screenshot
 
