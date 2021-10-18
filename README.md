@@ -73,3 +73,6 @@ Valerii Bihun: valeriibihun.co@gmail.com
 * https://www.youtube.com/watch?v=L8CF_k4jWBo&ab_channel=TheNetNinja
 * https://getcssscan.com/css-buttons-examples
 * https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535
+
+# License
+* MIT
