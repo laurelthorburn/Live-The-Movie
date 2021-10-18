@@ -58,6 +58,9 @@ Deployed Site: https://laurelthorburn.github.io/Live-The-Movie/
 
 Presentation: https://docs.google.com/presentation/d/1nFc2xP4fpfl6g6QyWAt7WTw1nwYVgMP8jpGsxEd8Hf0/edit?usp=sharing
 
+#Collaborators
+Laurel Thorburn: codinglaurel@gmail.com
+Valerii Bihun: valeriibihun.co@gmail.com
 
 # Resources/Credit
 
