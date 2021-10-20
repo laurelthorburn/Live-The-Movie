@@ -6,6 +6,14 @@ We created this project in order to provide our users with a holiday filled even
 
 Throughout this project, we continued to improve our javascript skills and further learned how to collaborate using github, a skill that had not yet been acquired for assignments as we had all gotten used to working alone until now.  Learning how to manage project tasks, fix merge issues, and build on collaboration was invaluable as we believe it has helped strength us as future team oriented coders.  We also enjoyed learning from one another and seeing how different one person's approach to a problem is than another's. 
 
+# Links
+
+Github: https://github.com/laurelthorburn/Live-The-Movie
+
+Deployed Site: https://laurelthorburn.github.io/Live-The-Movie/
+
+Presentation: https://docs.google.com/presentation/d/1nFc2xP4fpfl6g6QyWAt7WTw1nwYVgMP8jpGsxEd8Hf0/edit?usp=sharing
+
 ## User Story
 
 ```
@@ -49,14 +57,6 @@ Languages:
 # Website Screenshot
 
 ![GIF demonstrating usability of 'Live the Movie' site](./Assets/Media/livethemovie.gif)
-
-# Links
-
-Github: https://github.com/laurelthorburn/Live-The-Movie
-
-Deployed Site: https://laurelthorburn.github.io/Live-The-Movie/
-
-Presentation: https://docs.google.com/presentation/d/1nFc2xP4fpfl6g6QyWAt7WTw1nwYVgMP8jpGsxEd8Hf0/edit?usp=sharing
 
 # Collaborators
 
