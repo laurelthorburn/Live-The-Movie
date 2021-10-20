@@ -1,5 +1,5 @@
 # Live-The-Movie
-See the movie, live the movie. Not only will we help you determine which movie to watch, we'll help you create a unique holiday-themed night to remember.
+Watch the movie, live the movie. Not only will we help you determine which movie to watch, we'll help you create a unique holiday-themed night to remember.
 
 ## Description
 We created this project in order to provide our users with a holiday filled evening.  Using javascript, css, and HTML, we created a holiday themed page from scratch that uses two third party APIs, Spoonacular and TMDB, to fetch holiday themed recipes and movies.
