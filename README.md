@@ -54,9 +54,15 @@ Languages:
 * CSS
 * HTML
 
-# Website Screenshot
+# Website Video
 
 ![GIF demonstrating usability of 'Live the Movie' site](./Assets/Media/livethemovie.gif)
+
+# Website Screenshots
+
+![Photo demonstrating usability of 'Live the Movie' site](./Assets/Media/Screenshot1.png)
+
+![Photo demonstrating usability of 'Live the Movie' site](./Assets/Media/Screenshot2.png)
 
 # Collaborators
 
